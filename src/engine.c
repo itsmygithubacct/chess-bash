@@ -247,7 +247,8 @@ void engine_stop(Engine *e)
     if (e->in_fd >= 0) {
         /* Best effort only: closing stdin is itself a reliable quit signal,
          * and shutdown must not wait for a wedged engine's input pipe. */
-        (void)write(e->in_fd, "quit\n", 5);
+        ssize_t ignored = write(e->in_fd, "quit\n", 5);
+        (void)ignored;
         close(e->in_fd);
         e->in_fd = -1;
     }

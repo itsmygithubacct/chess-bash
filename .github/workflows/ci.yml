@@ -28,12 +28,12 @@ jobs:
       - name: Build warning-clean
         run: |
           make clean
-          make -j"$(nproc)" CFLAGS="-O2 -g -Wall -Wextra -Werror -std=c11"
+          make -j"$(nproc)" CFLAGS="-O2 -g -Wall -Wextra -Werror -std=c11 -D_FORTIFY_SOURCE=3"
 
       - name: Validate assets and run full tests
         run: |
           make validate-assets
-          make test CFLAGS="-O2 -g -Wall -Wextra -Werror -std=c11"
+          make test CFLAGS="-O2 -g -Wall -Wextra -Werror -std=c11 -D_FORTIFY_SOURCE=3"
 
       - name: Staged install smoke test with restrictive umask
         run: |
@@ -73,7 +73,7 @@ jobs:
         run: |
           make clean
           make -j"$(nproc)" all tests/engine-lifecycle \
-            CFLAGS="-O1 -g -Wall -Wextra -Werror -std=c11"
+            CFLAGS="-O1 -g -Wall -Wextra -Werror -std=c11 -D_FORTIFY_SOURCE=3"
 
       - name: Run practical memory checks
         run: |
