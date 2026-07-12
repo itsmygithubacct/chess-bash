@@ -20,7 +20,7 @@ jobs:
       CC: ${{ matrix.compiler }}
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Install build dependencies
         run: sudo apt-get update && sudo apt-get install -y zlib1g-dev
@@ -64,7 +64,7 @@ jobs:
     name: Valgrind
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Install build and analysis dependencies
         run: sudo apt-get update && sudo apt-get install -y valgrind zlib1g-dev
