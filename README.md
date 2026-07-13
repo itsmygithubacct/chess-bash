@@ -7,9 +7,7 @@ Animated isometric chess for Linux terminals that implement the Kitty graphics
 protocol. Chess Bash is written in C and renders a software framebuffer directly
 in the terminal—no desktop window or GUI toolkit required.
 
-![Chess Bash gameplay](docs/media/chess-bash-demo.gif)
-
-[View the full-resolution gameplay screenshot.](docs/media/chess-bash-gameplay.png)
+![Chess Bash gameplay](docs/media/chess-bash-gameplay.png)
 
 Pieces march across the battlefield, captures become short animated duels, and
 each match has music, sound cues, screen shake, six environments, and a complete
