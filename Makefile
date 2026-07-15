@@ -19,9 +19,18 @@ BOARD_IMAGES = assets/boards/ivy-courtyard.ppm \
 	assets/boards/marble-terminal.ppm assets/boards/desert-ruins.ppm \
 	assets/boards/ice-cathedral.ppm assets/boards/volcanic-forge.ppm \
 	assets/boards/orbital-space.ppm
-SFX_ASSETS = assets/sfx/select.wav assets/sfx/move_step.wav \
-	assets/sfx/capture_clank.wav assets/sfx/fall_thud.wav \
-	assets/sfx/start_trumpet.wav assets/sfx/win_trumpet.wav
+SFX_ASSETS = assets/sfx/select.wav assets/sfx/select_v02.wav \
+	assets/sfx/select_v03.wav assets/sfx/move_step.wav \
+	assets/sfx/move_step_v02.wav assets/sfx/move_step_v03.wav \
+	assets/sfx/move_step_v04.wav assets/sfx/move_step_v05.wav \
+	assets/sfx/move_step_v06.wav assets/sfx/capture_clank.wav \
+	assets/sfx/capture_clank_v02.wav assets/sfx/capture_clank_v03.wav \
+	assets/sfx/capture_clank_v04.wav assets/sfx/capture_clank_v05.wav \
+	assets/sfx/fall_thud.wav assets/sfx/fall_thud_v02.wav \
+	assets/sfx/fall_thud_v03.wav assets/sfx/fall_thud_v04.wav \
+	assets/sfx/start_trumpet.wav assets/sfx/start_trumpet_v02.wav \
+	assets/sfx/win_trumpet.wav assets/sfx/win_trumpet_v02.wav \
+	assets/sfx/check.wav assets/sfx/check_v02.wav assets/sfx/check_v03.wav
 MUSIC_ASSETS = assets/music/thinking_loop.wav assets/music/battle_loop.wav \
 	assets/music/victory_fanfare.wav
 ASSET_FILES = $(ROOT_IMAGES) $(BOARD_IMAGES) $(SFX_ASSETS) $(MUSIC_ASSETS)
@@ -78,6 +87,13 @@ validate-assets: $(ASSET_FILES)
 		[ "$$(dd if="$$file" bs=1 count=4 2>/dev/null)" = RIFF ] && \
 			[ "$$(dd if="$$file" bs=1 skip=8 count=4 2>/dev/null)" = WAVE ] || \
 			{ echo "invalid WAV header: $$file" >&2; return 1; }; \
+		format=$$(od -An -tu2 -j20 -N2 "$$file" | tr -d '[:space:]'); \
+		channels=$$(od -An -tu2 -j22 -N2 "$$file" | tr -d '[:space:]'); \
+		rate=$$(od -An -tu4 -j24 -N4 "$$file" | tr -d '[:space:]'); \
+		bits=$$(od -An -tu2 -j34 -N2 "$$file" | tr -d '[:space:]'); \
+		[ "$$format" = 1 ] && [ "$$channels" = 1 ] && \
+			[ "$$rate" = 44100 ] && [ "$$bits" = 16 ] || \
+			{ echo "unsupported WAV format: $$file (need mono 44.1 kHz PCM16)" >&2; return 1; }; \
 	}; \
 	check_ppm assets/title.ppm 640 360; \
 	check_ppm assets/pieces.ppm 768 256; \

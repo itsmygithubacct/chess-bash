@@ -23,7 +23,8 @@ set of chess rules.
 - Six boardless battlefield themes framing a centered isometric game board
 - Directional armies, walk and battle animation, captured-piece trays, move
   history, legal-move markers, check feedback, and a victory sequence
-- Music and sound with crossfades, plus fast and skippable battles
+- Music with crossfades and seven multi-variation sound-effect banks, plus fast
+  and skippable battles
 - Blue-side rotation, terminal resizing, compact layouts, and asynchronous AI
 
 ## Requirements
@@ -124,13 +125,16 @@ battlefield theme, compact and rotated layouts, animation states, and staged
 installation in CI.
 
 `--render-test` writes visual snapshots beneath `CHESS_BASH_RENDER_DIR` when it
-is set, or to the current directory otherwise.
+is set, or to the current directory otherwise. `--sound-test` plays every sound
+bank in sequence, including the check warning.
 
 ## Assets and license
 
-Chess Bash is released under the [MIT License](LICENSE). Project-specific art
-and audio are distributed under the same terms to the extent applicable. The
-embedded terminal font retains its permissive upstream notice. See the public
-[asset provenance and licensing manifest](docs/asset-sources.md) for details.
+Chess Bash code, project-specific art, and deterministic music are released
+under the [MIT License](LICENSE) to the extent applicable. The bundled
+ElevenLabs-generated gameplay SFX have a separate asset exception and may not
+be extracted, relicensed, or distributed as standalone sounds. The embedded
+terminal font retains its permissive upstream notice. See the public [asset
+provenance and licensing manifest](docs/asset-sources.md) for details.
 
 See [CHANGELOG.md](CHANGELOG.md) for release notes.

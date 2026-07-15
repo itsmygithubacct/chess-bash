@@ -22,11 +22,20 @@ SOFTWARE.
 
 ---
 
-Unless an asset is identified below as third-party material, the MIT License
-above also applies to the project-specific visual and audio assets in the
-assets/ directory, to the extent copyright or related rights exist. Those
-assets were created for Chess Bash using generative image tools or original
-procedural audio synthesis; see docs/asset-sources.md for provenance.
+Unless an asset is identified below as third-party material or as an exception,
+the MIT License above also applies to the project-specific visual assets and
+the deterministic music in assets/music/, to the extent copyright or related
+rights exist. See docs/asset-sources.md for provenance.
+
+Sound-effect asset exception
+
+The MIT License above does not apply to the ElevenLabs-generated WAV files in
+assets/sfx/. Those files are included solely as bundled components of Chess
+Bash, subject to the ElevenLabs Terms of Service, Sound Effects Terms, and
+Prohibited Use Policy. No permission is granted here to sell, distribute,
+perform, license, sublicense, or otherwise exploit those sound effects on a
+standalone basis, including as isolated files, samples, or part of a sound
+library. See docs/asset-sources.md and docs/audio-provenance.json.
 
 The embedded terminal font (src/font8x16.h) is extracted from Debian
 console-setup's Lat15-Fixed16 console font, which Debian declares public

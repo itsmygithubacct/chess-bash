@@ -585,19 +585,21 @@ static int sound_test(void)
         sound_shutdown();
         return 0;
     }
-    printf("sound-test: playing select, move, capture, fall, start trumpet, win trumpet\n");
+    printf("sound-test: playing select, move, capture, fall, start trumpet, win trumpet, check\n");
     sound_play(SND_SELECT, 0.7f, 1.0f);
-    sleep_ms(180);
+    sleep_ms(220);
     sound_play(SND_MOVE, 0.8f, 1.0f);
-    sleep_ms(320);
+    sleep_ms(380);
     sound_play(SND_CAPTURE, 0.8f, 1.0f);
-    sleep_ms(650);
+    sleep_ms(600);
     sound_play(SND_FALL, 0.8f, 1.0f);
-    sleep_ms(520);
+    sleep_ms(900);
     sound_play(SND_START_TRUMPET, 0.8f, 1.0f);
-    sleep_ms(1000);
+    sleep_ms(1400);
     sound_play(SND_WIN_TRUMPET, 0.8f, 1.0f);
-    sleep_ms(1500);
+    sleep_ms(2600);
+    sound_play(SND_CHECK, 0.8f, 1.0f);
+    sleep_ms(600);
     sound_shutdown();
     return 0;
 }

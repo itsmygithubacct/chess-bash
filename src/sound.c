@@ -16,6 +16,7 @@
 #define SR 44100
 #define MIX_FRAMES 192
 #define MAX_VOICES 16
+#define MAX_SFX_VARIANTS 6
 
 typedef struct { int16_t *data; int len; } Sample;
 typedef struct {
@@ -37,7 +38,9 @@ typedef struct {
     int id;
 } MusicVoice;
 
-static Sample samples[SOUND_COUNT];
+static Sample samples[SOUND_COUNT][MAX_SFX_VARIANTS];
+static uint8_t sample_counts[SOUND_COUNT];
+static uint8_t last_variants[SOUND_COUNT];
 static Sample music_tracks[MUSIC_COUNT];
 static Voice voices[MAX_VOICES];
 static MusicVoice music_slots[2];
@@ -48,12 +51,21 @@ static int sink_fd = -1;
 static pid_t sink_pid = -1;
 static uint32_t srng = 0x51a7c0deu;
 
-static void clear_sample(int id)
+static void clear_sample(int id, int variant)
+{
+    if (id < 0 || id >= SOUND_COUNT ||
+        variant < 0 || variant >= MAX_SFX_VARIANTS) return;
+    free(samples[id][variant].data);
+    samples[id][variant].data = NULL;
+    samples[id][variant].len = 0;
+}
+
+static void clear_sample_bank(int id)
 {
     if (id < 0 || id >= SOUND_COUNT) return;
-    free(samples[id].data);
-    samples[id].data = NULL;
-    samples[id].len = 0;
+    for (int variant = 0; variant < MAX_SFX_VARIANTS; variant++)
+        clear_sample(id, variant);
+    sample_counts[id] = 0;
 }
 
 static float frand_audio(void)
@@ -81,9 +93,10 @@ static void bake(int id, const float *src, int n, float peak)
         if (n - i < fo) v *= (float)(n - i) / fo;
         out[i] = (int16_t)(v * 32767.0f);
     }
-    clear_sample(id);
-    samples[id].data = out;
-    samples[id].len = n;
+    clear_sample_bank(id);
+    samples[id][0].data = out;
+    samples[id][0].len = n;
+    sample_counts[id] = 1;
 }
 
 static void gen_beep(int id, float f0, float f1, float dur, float peak)
@@ -292,20 +305,60 @@ static bool load_wav_into(Sample *dst, const char *path)
     return true;
 }
 
-static bool load_wav_sample(int id, const char *path)
+static bool load_wav_sample(int id, int variant, const char *path)
 {
-    if (id < 0 || id >= SOUND_COUNT) return false;
-    return load_wav_into(&samples[id], path);
+    if (id < 0 || id >= SOUND_COUNT ||
+        variant < 0 || variant >= MAX_SFX_VARIANTS) return false;
+    return load_wav_into(&samples[id][variant], path);
+}
+
+static void load_sfx_bank(int id, const char *const *paths, int count)
+{
+    if (id < 0 || id >= SOUND_COUNT || !paths || count < 1) return;
+    if (count > MAX_SFX_VARIANTS) count = MAX_SFX_VARIANTS;
+    int loaded = 0;
+    for (int variant = 0; variant < count; variant++) {
+        if (!load_wav_sample(id, variant, asset_path(paths[variant]))) break;
+        loaded++;
+    }
+    if (loaded > 0) sample_counts[id] = (uint8_t)loaded;
 }
 
 static void load_sfx_assets(void)
 {
-    load_wav_sample(SND_SELECT, asset_path("sfx/select.wav"));
-    load_wav_sample(SND_MOVE, asset_path("sfx/move_step.wav"));
-    load_wav_sample(SND_CAPTURE, asset_path("sfx/capture_clank.wav"));
-    load_wav_sample(SND_FALL, asset_path("sfx/fall_thud.wav"));
-    load_wav_sample(SND_START_TRUMPET, asset_path("sfx/start_trumpet.wav"));
-    load_wav_sample(SND_WIN_TRUMPET, asset_path("sfx/win_trumpet.wav"));
+    static const char *const select[] = {
+        "sfx/select.wav", "sfx/select_v02.wav", "sfx/select_v03.wav"
+    };
+    static const char *const move[] = {
+        "sfx/move_step.wav", "sfx/move_step_v02.wav", "sfx/move_step_v03.wav",
+        "sfx/move_step_v04.wav", "sfx/move_step_v05.wav", "sfx/move_step_v06.wav"
+    };
+    static const char *const capture[] = {
+        "sfx/capture_clank.wav", "sfx/capture_clank_v02.wav",
+        "sfx/capture_clank_v03.wav", "sfx/capture_clank_v04.wav",
+        "sfx/capture_clank_v05.wav"
+    };
+    static const char *const fall[] = {
+        "sfx/fall_thud.wav", "sfx/fall_thud_v02.wav",
+        "sfx/fall_thud_v03.wav", "sfx/fall_thud_v04.wav"
+    };
+    static const char *const start[] = {
+        "sfx/start_trumpet.wav", "sfx/start_trumpet_v02.wav"
+    };
+    static const char *const win[] = {
+        "sfx/win_trumpet.wav", "sfx/win_trumpet_v02.wav"
+    };
+    static const char *const check[] = {
+        "sfx/check.wav", "sfx/check_v02.wav", "sfx/check_v03.wav"
+    };
+
+    load_sfx_bank(SND_SELECT, select, (int)(sizeof select / sizeof select[0]));
+    load_sfx_bank(SND_MOVE, move, (int)(sizeof move / sizeof move[0]));
+    load_sfx_bank(SND_CAPTURE, capture, (int)(sizeof capture / sizeof capture[0]));
+    load_sfx_bank(SND_FALL, fall, (int)(sizeof fall / sizeof fall[0]));
+    load_sfx_bank(SND_START_TRUMPET, start, (int)(sizeof start / sizeof start[0]));
+    load_sfx_bank(SND_WIN_TRUMPET, win, (int)(sizeof win / sizeof win[0]));
+    load_sfx_bank(SND_CHECK, check, (int)(sizeof check / sizeof check[0]));
 }
 
 static void load_music_assets(void)
@@ -523,6 +576,7 @@ bool sound_init(void)
     signal(SIGPIPE, SIG_IGN);
     synth_all();
     load_sfx_assets();
+    memset(last_variants, 0xff, sizeof last_variants);
     load_music_assets();
     for (int i = 0; i < SINK_COUNT && sink_fd < 0; i++)
         if (spawn_sink(i)) sink_idx = i;
@@ -545,7 +599,7 @@ void sound_shutdown(void)
     memset(voices, 0, sizeof voices);
     memset(music_slots, 0, sizeof music_slots);
     for (int i = 0; i < SOUND_COUNT; i++)
-        clear_sample(i);
+        clear_sample_bank(i);
     for (int i = 0; i < MUSIC_COUNT; i++) {
         free(music_tracks[i].data);
         music_tracks[i].data = NULL;
@@ -620,14 +674,26 @@ int sound_music_current(void)
 
 void sound_play(int id, float vol, float pitch)
 {
-    if (id < 0 || id >= SOUND_COUNT || !samples[id].data ||
+    if (id < 0 || id >= SOUND_COUNT || sample_counts[id] == 0 ||
+        !samples[id][0].data ||
         !atomic_load_explicit(&running, memory_order_acquire))
         return;
     pthread_mutex_lock(&sound_lock);
+    int variant = 0;
+    int count = sample_counts[id];
+    if (count > 1) {
+        variant = (int)(frand_audio() * count);
+        if (variant == last_variants[id]) {
+            int offset = 1 + (int)(frand_audio() * (count - 1));
+            variant = (variant + offset) % count;
+        }
+    }
+    last_variants[id] = (uint8_t)variant;
+    const Sample *sample = &samples[id][variant];
     for (int i = 0; i < MAX_VOICES; i++) {
         if (!voices[i].active) {
-            voices[i].data = samples[id].data;
-            voices[i].len = samples[id].len;
+            voices[i].data = sample->data;
+            voices[i].len = sample->len;
             voices[i].pos = 0;
             voices[i].step = pitch <= 0 ? 1.0f : pitch;
             voices[i].vol = clampf(vol, 0, 1.5f);
