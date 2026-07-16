@@ -128,6 +128,10 @@ installation in CI.
 is set, or to the current directory otherwise. `--sound-test` plays every sound
 bank in sequence, including the check warning.
 
+Kitty presentation and audio voice/music mixing use vendored
+`kitty-framebuffer` and `pcm-mixer` copies under `third_party/`. Chess Bash's
+isometric sprite renderer remains game-specific.
+
 ## Assets and license
 
 Chess Bash code, project-specific art, and deterministic music are released
