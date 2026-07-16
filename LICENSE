@@ -27,15 +27,14 @@ the MIT License above also applies to the project-specific visual assets and
 the deterministic music in assets/music/, to the extent copyright or related
 rights exist. See docs/asset-sources.md for provenance.
 
-Sound-effect asset exception
+Sound-effect assets
 
-The MIT License above does not apply to the ElevenLabs-generated WAV files in
-assets/sfx/. Those files are included solely as bundled components of Chess
-Bash, subject to the ElevenLabs Terms of Service, Sound Effects Terms, and
-Prohibited Use Policy. No permission is granted here to sell, distribute,
-perform, license, sublicense, or otherwise exploit those sound effects on a
-standalone basis, including as isolated files, samples, or part of a sound
-library. See docs/asset-sources.md and docs/audio-provenance.json.
+The WAV files in assets/sfx/ are generated locally and CC0-derived: procedural
+cues are pure DSP synthesis (combat_generators, ui_game_state_generator), and
+the two trumpet cues are Strudel pure-synth patterns (music_sound_generator) —
+synthesised waveforms only, no sample banks. They carry no standalone-use
+restriction and may be freely used, modified, and redistributed. Per-file
+provenance is in docs/asset-sources.md and docs/audio-provenance.json.
 
 The embedded terminal font (src/font8x16.h) is extracted from Debian
 console-setup's Lat15-Fixed16 console font, which Debian declares public

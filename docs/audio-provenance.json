@@ -1,2363 +1,780 @@
 {
-  "account_plan_attestation": "Starter paid subscription, stated by the account owner on 2026-07-14",
-  "candidate_inventory": 58,
-  "candidate_root": "review/elevenlabs-v2/chess-bash",
-  "commercial_use_basis": "generated during the account owner's paid Starter subscription; use is subject to the ElevenLabs terms captured by the raw candidate metadata",
-  "cues": [
-    {
-      "artifacts": [
-        {
-          "channels": 1,
-          "duration_seconds": 0.14,
-          "final_sha256": "2418b98d07476fdfce310815ac150ba2fa3c2ec07db70e91347d94ee73991012",
-          "runtime_file": "assets/sfx/select.wav",
-          "sample_rate": 44100,
-          "source_candidate": 6,
-          "source_sha256": "072c921279fe8643056c1f4d56350b76eb8db8e7ffe7589279ddaac81458668e",
-          "variant": 1
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.14,
-          "final_sha256": "c07bd916d51235e60b76f7e51dfaf77edddc5cbd16432485d7cc5f6563c847b6",
-          "runtime_file": "assets/sfx/select_v02.wav",
-          "sample_rate": 44100,
-          "source_candidate": 2,
-          "source_sha256": "acbbd0562d4467a6f7f8618c4858b486530de5df634d3b8d7017c38620dd0650",
-          "variant": 2
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.14,
-          "final_sha256": "ad8edee416864a9ec81a5495652cf9f19d7f670fc895b3d9d966731e87082230",
-          "runtime_file": "assets/sfx/select_v03.wav",
-          "sample_rate": 44100,
-          "source_candidate": 4,
-          "source_sha256": "c3c90c21abdab0331b2bcf4c489a11f8cc202213ff11f6bc1daa726c8f22c37c",
-          "variant": 3
-        }
-      ],
-      "candidates": [
-        {
-          "candidate": 6,
-          "combined_score": 1.0,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/select/candidate_06.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/select/candidate_06.wav",
-          "mastered_preview_sha256": "2418b98d07476fdfce310815ac150ba2fa3c2ec07db70e91347d94ee73991012",
-          "maximum_selected_waveform_correlation": 0.214282,
-          "metrics": {
-            "active_duration_seconds": 0.03458,
-            "clipping_fraction": 0.0001,
-            "crest_factor": 5.32651,
-            "envelope_cv": 1.99525,
-            "event_peaks": 1,
-            "onset_seconds": 0.05093,
-            "peak_time_seconds": 0.017256,
-            "source_rms_dbfs": -21.385,
-            "spectral_centroid_hz": 783.85,
-            "spectral_flatness": 0.0003868,
-            "tail_energy_ratio": 6.1e-05
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.948572,
-          "semantic_score_normalized_within_cue": 1.0,
-          "shape_score": 1.0,
-          "source_sha256": "072c921279fe8643056c1f4d56350b76eb8db8e7ffe7589279ddaac81458668e"
-        },
-        {
-          "candidate": 2,
-          "combined_score": 0.83229,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/select/candidate_02.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/select/candidate_02.wav",
-          "mastered_preview_sha256": "c07bd916d51235e60b76f7e51dfaf77edddc5cbd16432485d7cc5f6563c847b6",
-          "maximum_selected_waveform_correlation": 0.21517,
-          "metrics": {
-            "active_duration_seconds": 0.033288,
-            "clipping_fraction": 0.0,
-            "crest_factor": 5.8882,
-            "envelope_cv": 2.22078,
-            "event_peaks": 1,
-            "onset_seconds": 0.088571,
-            "peak_time_seconds": 0.012381,
-            "source_rms_dbfs": -21.676,
-            "spectral_centroid_hz": 812.68,
-            "spectral_flatness": 0.0001591,
-            "tail_energy_ratio": 7e-06
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.780649,
-          "semantic_score_normalized_within_cue": 0.753367,
-          "shape_score": 1.0,
-          "source_sha256": "acbbd0562d4467a6f7f8618c4858b486530de5df634d3b8d7017c38620dd0650"
-        },
-        {
-          "candidate": 4,
-          "combined_score": 0.683595,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/select/candidate_04.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/select/candidate_04.wav",
-          "mastered_preview_sha256": "ad8edee416864a9ec81a5495652cf9f19d7f670fc895b3d9d966731e87082230",
-          "maximum_selected_waveform_correlation": 0.21517,
-          "metrics": {
-            "active_duration_seconds": 0.03,
-            "clipping_fraction": 6.667e-05,
-            "crest_factor": 8.45273,
-            "envelope_cv": 2.29362,
-            "event_peaks": 1,
-            "onset_seconds": 0.054263,
-            "peak_time_seconds": 0.016417,
-            "source_rms_dbfs": -21.233,
-            "spectral_centroid_hz": 739.03,
-            "spectral_flatness": 0.0002006,
-            "tail_energy_ratio": 9e-06
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.631954,
-          "semantic_score_normalized_within_cue": 0.534698,
-          "shape_score": 1.0,
-          "source_sha256": "c3c90c21abdab0331b2bcf4c489a11f8cc202213ff11f6bc1daa726c8f22c37c"
-        },
-        {
-          "candidate": 1,
-          "combined_score": 0.53235,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/select/candidate_01.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/select/candidate_01.wav",
-          "mastered_preview_sha256": "727c5871c2c12499329d7fc21dc960c6e645b92adf731adf67378f04943f5b50",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.13712,
-            "clipping_fraction": 0.0,
-            "crest_factor": 6.73824,
-            "envelope_cv": 0.74464,
-            "event_peaks": 1,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.003696,
-            "source_rms_dbfs": -69.475,
-            "spectral_centroid_hz": 2374.28,
-            "spectral_flatness": 0.0108341,
-            "tail_energy_ratio": 0.012784
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.31228,
-          "shape_score": 1.0,
-          "source_sha256": "9296105bd05f3f8ed0da5180ec6294a9341478f7e66afc59ae2777640c33f1d6"
-        },
-        {
-          "candidate": 5,
-          "combined_score": 0.48539,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/select/candidate_05.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/select/candidate_05.wav",
-          "mastered_preview_sha256": "fb953d051ca302d48006f1fc1027a1a37216758cdfbf0b9098de019eb1a70577",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.037551,
-            "clipping_fraction": 6.667e-05,
-            "crest_factor": 4.90502,
-            "envelope_cv": 1.87248,
-            "event_peaks": 1,
-            "onset_seconds": 0.109116,
-            "peak_time_seconds": 0.014989,
-            "source_rms_dbfs": -20.384,
-            "spectral_centroid_hz": 1045.68,
-            "spectral_flatness": 0.000185,
-            "tail_energy_ratio": 1e-06
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.24322,
-          "shape_score": 1.0,
-          "source_sha256": "b515776a0f0ebd6f063228f33af0f6748fbfc1817eb5ee4dc49d38bfa3f57167"
-        },
-        {
-          "candidate": 3,
-          "combined_score": 0.319056,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/select/candidate_03.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/select/candidate_03.wav",
-          "mastered_preview_sha256": "12c6a01c7ad18d8745838147ffbe747afa69ee6cdf8418f7ca4cbf5322aded96",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.023673,
-            "clipping_fraction": 0.00023334,
-            "crest_factor": 7.82738,
-            "envelope_cv": 2.39723,
-            "event_peaks": 1,
-            "onset_seconds": 0.046803,
-            "peak_time_seconds": 0.014762,
-            "source_rms_dbfs": -21.059,
-            "spectral_centroid_hz": 1148.03,
-            "spectral_flatness": 0.0006628,
-            "tail_energy_ratio": 1.5e-05
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.0,
-          "shape_score": 0.997051,
-          "source_sha256": "d84a989f3b70cc4f10ffaaa75ce3ab4e36293bd04b7e1d24bea48e366da74d22"
-        }
-      ],
-      "id": "select",
-      "pilot_anchor_candidates": [],
-      "prompt": "One isolated tactile game selection sound: a small carved hardwood chess piece tapped once by a gloved finger on a thick wooden chessboard. Close-miked dry studio Foley, crisp natural wood transient, tiny short resonance. Exactly one tap. No footsteps, no electronic beep, no music, no ambience, no voices, no reverb.",
-      "requested_variants": 3,
-      "selected_candidates": [
-        6,
-        2,
-        4
-      ],
-      "target_duration_seconds": 0.14
-    },
-    {
-      "artifacts": [
-        {
-          "channels": 1,
-          "duration_seconds": 0.29,
-          "final_sha256": "f8dec79c4c5e7790759bd58fe657d87cfd4bf4997ffa66ae81b0a43923e60888",
-          "runtime_file": "assets/sfx/move_step.wav",
-          "sample_rate": 44100,
-          "source_candidate": 7,
-          "source_sha256": "aeb339037d8a1e1e31a3dbc25764fca9698bcd4ea3808cd7ead6381f03ee111d",
-          "variant": 1
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.29,
-          "final_sha256": "ecc1762e65f22aa1d3e762ae225e698170148e27e5de55e7d550d3671fc00ddf",
-          "runtime_file": "assets/sfx/move_step_v02.wav",
-          "sample_rate": 44100,
-          "source_candidate": 1,
-          "source_sha256": "66115c02114319eacd4ec8210ba6304658f9fdcea1b15eac86d81cafbcc6e605",
-          "variant": 2
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.29,
-          "final_sha256": "d108c95bb5e52738002910900a09b09c50795090e23e1d00bd311cf425740c5f",
-          "runtime_file": "assets/sfx/move_step_v03.wav",
-          "sample_rate": 44100,
-          "source_candidate": 2,
-          "source_sha256": "683420295c4cb211bcf53b40852f8109cc9e3712f72b740b49949fbdcaab632e",
-          "variant": 3
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.29,
-          "final_sha256": "491b87064694237fd5f49967f4b4be75a69ef67dd9ace9fefdd0fd5e3f1e2c06",
-          "runtime_file": "assets/sfx/move_step_v04.wav",
-          "sample_rate": 44100,
-          "source_candidate": 6,
-          "source_sha256": "1ac354d228ac2d44f5d2a28f3cd8854681d7272067565ec91a5e92255125bde9",
-          "variant": 4
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.29,
-          "final_sha256": "97f8571caa9781f49cb70968add4e1c28dbf892635638f368d6ff03550b240be",
-          "runtime_file": "assets/sfx/move_step_v05.wav",
-          "sample_rate": 44100,
-          "source_candidate": 9,
-          "source_sha256": "279e99825c8be13ed845a284e4a24d790c33f21aceeb7e487c9667005d04d155",
-          "variant": 5
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.29,
-          "final_sha256": "88563b4ceb3f297ba46460ddf8587fe7002d9093787777201da31d4850fc3bc7",
-          "runtime_file": "assets/sfx/move_step_v06.wav",
-          "sample_rate": 44100,
-          "source_candidate": 12,
-          "source_sha256": "a40a0e5e3a8405a758f6b7bac3a669d8e81572585d9b1afa9413baf4d6bc2d6a",
-          "variant": 6
-        }
-      ],
-      "candidates": [
-        {
-          "candidate": 7,
-          "combined_score": 1.0,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_07.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_07.wav",
-          "mastered_preview_sha256": "f8dec79c4c5e7790759bd58fe657d87cfd4bf4997ffa66ae81b0a43923e60888",
-          "maximum_selected_waveform_correlation": 0.268988,
-          "metrics": {
-            "active_duration_seconds": 0.204762,
-            "clipping_fraction": 0.0,
-            "crest_factor": 11.47072,
-            "envelope_cv": 1.20005,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.005601,
-            "source_rms_dbfs": -47.103,
-            "spectral_centroid_hz": 2874.49,
-            "spectral_flatness": 0.0152164,
-            "tail_energy_ratio": 0.001471
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.935443,
-          "semantic_score_normalized_within_cue": 1.0,
-          "shape_score": 1.0,
-          "source_sha256": "aeb339037d8a1e1e31a3dbc25764fca9698bcd4ea3808cd7ead6381f03ee111d"
-        },
-        {
-          "candidate": 1,
-          "combined_score": 0.940558,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_01.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_01.wav",
-          "mastered_preview_sha256": "ecc1762e65f22aa1d3e762ae225e698170148e27e5de55e7d550d3671fc00ddf",
-          "maximum_selected_waveform_correlation": 0.057067,
-          "metrics": {
-            "active_duration_seconds": 0.051542,
-            "clipping_fraction": 0.0,
-            "crest_factor": 12.23514,
-            "envelope_cv": 2.38039,
-            "event_peaks": 1,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.035805,
-            "source_rms_dbfs": -26.73,
-            "spectral_centroid_hz": 566.98,
-            "spectral_flatness": 0.001151,
-            "tail_energy_ratio": 0.000183
-          },
-          "pilot_anchor": true,
-          "selected": true,
-          "selection_score_after_diversity": 0.926862,
-          "semantic_score_normalized_within_cue": 0.934065,
-          "shape_score": 0.954356,
-          "source_sha256": "66115c02114319eacd4ec8210ba6304658f9fdcea1b15eac86d81cafbcc6e605"
-        },
-        {
-          "candidate": 2,
-          "combined_score": 0.920807,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_02.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_02.wav",
-          "mastered_preview_sha256": "d108c95bb5e52738002910900a09b09c50795090e23e1d00bd311cf425740c5f",
-          "maximum_selected_waveform_correlation": 0.027058,
-          "metrics": {
-            "active_duration_seconds": 0.140952,
-            "clipping_fraction": 0.0,
-            "crest_factor": 9.2873,
-            "envelope_cv": 2.15004,
-            "event_peaks": 1,
-            "onset_seconds": 0.006735,
-            "peak_time_seconds": 0.123356,
-            "source_rms_dbfs": -25.448,
-            "spectral_centroid_hz": 246.22,
-            "spectral_flatness": 4.45e-05,
-            "tail_energy_ratio": 0.015007
-          },
-          "pilot_anchor": true,
-          "selected": true,
-          "selection_score_after_diversity": 0.914313,
-          "semantic_score_normalized_within_cue": 0.88363,
-          "shape_score": 0.999808,
-          "source_sha256": "683420295c4cb211bcf53b40852f8109cc9e3712f72b740b49949fbdcaab632e"
-        },
-        {
-          "candidate": 6,
-          "combined_score": 0.836096,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_06.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_06.wav",
-          "mastered_preview_sha256": "491b87064694237fd5f49967f4b4be75a69ef67dd9ace9fefdd0fd5e3f1e2c06",
-          "maximum_selected_waveform_correlation": 0.19219,
-          "metrics": {
-            "active_duration_seconds": 0.128889,
-            "clipping_fraction": 0.0,
-            "crest_factor": 6.80918,
-            "envelope_cv": 2.07478,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.003084,
-            "source_rms_dbfs": -28.183,
-            "spectral_centroid_hz": 1421.05,
-            "spectral_flatness": 0.0008747,
-            "tail_energy_ratio": 0.000395
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.78997,
-          "semantic_score_normalized_within_cue": 0.758965,
-          "shape_score": 1.0,
-          "source_sha256": "1ac354d228ac2d44f5d2a28f3cd8854681d7272067565ec91a5e92255125bde9"
-        },
-        {
-          "candidate": 9,
-          "combined_score": 0.778554,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_09.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_09.wav",
-          "mastered_preview_sha256": "97f8571caa9781f49cb70968add4e1c28dbf892635638f368d6ff03550b240be",
-          "maximum_selected_waveform_correlation": 0.268988,
-          "metrics": {
-            "active_duration_seconds": 0.202585,
-            "clipping_fraction": 0.0,
-            "crest_factor": 8.68549,
-            "envelope_cv": 1.29657,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.172336,
-            "source_rms_dbfs": -34.713,
-            "spectral_centroid_hz": 455.42,
-            "spectral_flatness": 0.0003938,
-            "tail_energy_ratio": 0.000815
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.713997,
-          "semantic_score_normalized_within_cue": 0.698498,
-          "shape_score": 0.948673,
-          "source_sha256": "279e99825c8be13ed845a284e4a24d790c33f21aceeb7e487c9667005d04d155"
-        },
-        {
-          "candidate": 12,
-          "combined_score": 0.770478,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_12.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_12.wav",
-          "mastered_preview_sha256": "88563b4ceb3f297ba46460ddf8587fe7002d9093787777201da31d4850fc3bc7",
-          "maximum_selected_waveform_correlation": 0.228051,
-          "metrics": {
-            "active_duration_seconds": 0.198934,
-            "clipping_fraction": 0.0,
-            "crest_factor": 7.86448,
-            "envelope_cv": 1.82577,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.00458,
-            "source_rms_dbfs": -41.427,
-            "spectral_centroid_hz": 870.49,
-            "spectral_flatness": 0.003159,
-            "tail_energy_ratio": 0.000556
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.715746,
-          "semantic_score_normalized_within_cue": 0.662468,
-          "shape_score": 1.0,
-          "source_sha256": "a40a0e5e3a8405a758f6b7bac3a669d8e81572585d9b1afa9413baf4d6bc2d6a"
-        },
-        {
-          "candidate": 8,
-          "combined_score": 0.721365,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_08.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_08.wav",
-          "mastered_preview_sha256": "5fd297c527ab19574e0a807e38d92118ea8b073197b11eca2f870156c2e283a2",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.278299,
-            "clipping_fraction": 0.0,
-            "crest_factor": 8.2301,
-            "envelope_cv": 1.12824,
-            "event_peaks": 3,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.00746,
-            "source_rms_dbfs": -45.245,
-            "spectral_centroid_hz": 3829.31,
-            "spectral_flatness": 0.0165395,
-            "tail_energy_ratio": 0.008728
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.590243,
-          "shape_score": 1.0,
-          "source_sha256": "2f20565b5b6a099f7f5e75a7bd1635d5dca521b23dbaec318fcf827f8532ef36"
-        },
-        {
-          "candidate": 5,
-          "combined_score": 0.687386,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_05.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_05.wav",
-          "mastered_preview_sha256": "81df0b124964394ccd9fa3877532a15af8fe0a4e6c7faca8af7d81580022ba8c",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.233129,
-            "clipping_fraction": 0.0,
-            "crest_factor": 8.75576,
-            "envelope_cv": 1.6238,
-            "event_peaks": 1,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.007937,
-            "source_rms_dbfs": -39.048,
-            "spectral_centroid_hz": 3889.3,
-            "spectral_flatness": 0.0070379,
-            "tail_energy_ratio": 0.025894
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.540273,
-          "shape_score": 1.0,
-          "source_sha256": "1c77746217c01e3aac0fa960d827000b538fca823a6c018604943a18cb0b8251"
-        },
-        {
-          "candidate": 11,
-          "combined_score": 0.629285,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_11.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_11.wav",
-          "mastered_preview_sha256": "6fe390119d6affd9d72c31b80e03c1339a2a534fc6bea6f69461325e7363294f",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.075215,
-            "clipping_fraction": 0.0,
-            "crest_factor": 11.07532,
-            "envelope_cv": 2.06804,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.00839,
-            "source_rms_dbfs": -34.156,
-            "spectral_centroid_hz": 337.98,
-            "spectral_flatness": 0.0019754,
-            "tail_energy_ratio": 0.000162
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.454831,
-          "shape_score": 1.0,
-          "source_sha256": "f97f92d9facb4e56cbb52f087850821ab20747b0296a0e11653f6133a3bb9c70"
-        },
-        {
-          "candidate": 10,
-          "combined_score": 0.565817,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_10.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_10.wav",
-          "mastered_preview_sha256": "1c8c7c2c2cfdbb05b56c0c955cd9480ef2041374232cb61784ad90ed9abb92b7",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.207891,
-            "clipping_fraction": 0.0,
-            "crest_factor": 9.91776,
-            "envelope_cv": 1.92828,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.241202,
-            "source_rms_dbfs": -28.56,
-            "spectral_centroid_hz": 488.04,
-            "spectral_flatness": 0.0008988,
-            "tail_energy_ratio": 0.914393
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.781798,
-          "shape_score": 0.106857,
-          "source_sha256": "d516dd2899aba6a38b435fddf14a798171bc1a29aa7053066921403b65bed06a"
-        },
-        {
-          "candidate": 3,
-          "combined_score": 0.363792,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_03.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_03.wav",
-          "mastered_preview_sha256": "0a7a5ef78bf6035b3cdbed3bc995eb01628483386797c21dc1da96d4946d3381",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.214989,
-            "clipping_fraction": 0.0,
-            "crest_factor": 10.11897,
-            "envelope_cv": 0.95237,
-            "event_peaks": 3,
-            "onset_seconds": 0.092902,
-            "peak_time_seconds": 0.245261,
-            "source_rms_dbfs": -35.248,
-            "spectral_centroid_hz": 3888.41,
-            "spectral_flatness": 0.0025698,
-            "tail_energy_ratio": 0.746657
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.485158,
-          "shape_score": 0.10589,
-          "source_sha256": "1a51bc21461309b831877b9c6544a4e470afafb83c11ba02944917325e9a638e"
-        },
-        {
-          "candidate": 4,
-          "combined_score": 0.283393,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/move/candidate_04.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/move/candidate_04.wav",
-          "mastered_preview_sha256": "9e21a4d9bf004bcb7c24c0d04147232889101242daac70a348679366594d4483",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.040091,
-            "clipping_fraction": 0.0,
-            "crest_factor": 13.1864,
-            "envelope_cv": 2.86274,
-            "event_peaks": 1,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.011156,
-            "source_rms_dbfs": -33.786,
-            "spectral_centroid_hz": 2107.34,
-            "spectral_flatness": 0.0181714,
-            "tail_energy_ratio": 0.000231
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.0,
-          "shape_score": 0.885604,
-          "source_sha256": "171be57e581a9778f02f2e78f8fac4206852e893091b5c6d8abb64b263fece32"
-        }
-      ],
-      "id": "move",
-      "pilot_anchor_candidates": [
-        1,
-        2
-      ],
-      "prompt": "One isolated realistic medieval footstep: a heavy leather boot with a little plate armor plants once firmly on a solid wooden floor. Close-miked dry Foley, audible heel-to-sole impact, convincing leather and wood texture, very faint armor jingle, short decay. Exactly one footstep. No second step, no walking sequence, no music, no ambience, no voice, no cinematic boom, no synthetic tones.",
-      "requested_variants": 6,
-      "selected_candidates": [
-        7,
-        1,
-        2,
-        6,
-        9,
-        12
-      ],
-      "target_duration_seconds": 0.29
-    },
-    {
-      "artifacts": [
-        {
-          "channels": 1,
-          "duration_seconds": 0.48,
-          "final_sha256": "5d7133373fd83bbc74feb653ce1236accb53b0d473032f6a687daa5ddde11de4",
-          "runtime_file": "assets/sfx/capture_clank.wav",
-          "sample_rate": 44100,
-          "source_candidate": 6,
-          "source_sha256": "07dae2e52a263d61659cb368c2dca774dee65db6faebe8e80b3919e05707230a",
-          "variant": 1
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.48,
-          "final_sha256": "613d520253d846720926e9af97e56492642b2cdbe861031fecaa0c6653f1f38a",
-          "runtime_file": "assets/sfx/capture_clank_v02.wav",
-          "sample_rate": 44100,
-          "source_candidate": 12,
-          "source_sha256": "3e4d125f928d83af03f745641a0c2d6491ab098a22583ca81f590631f09fe7f2",
-          "variant": 2
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.48,
-          "final_sha256": "cad631f88866179a07b68a25e34bcde151af76b0973b99afcf0bef449c5cc62c",
-          "runtime_file": "assets/sfx/capture_clank_v03.wav",
-          "sample_rate": 44100,
-          "source_candidate": 8,
-          "source_sha256": "f5153b53f0a19012d95ae471549686298e9bea21c063fbcb85bb83c2c1147209",
-          "variant": 3
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.48,
-          "final_sha256": "a29f4cdea901215b0a771434c287a401e8ed0929066f7844f45ce1120afc904f",
-          "runtime_file": "assets/sfx/capture_clank_v04.wav",
-          "sample_rate": 44100,
-          "source_candidate": 1,
-          "source_sha256": "ae3551c6a0e3a716ca98e4c808d65a6c6cc129596d9f4a0919884837c3788b13",
-          "variant": 4
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.48,
-          "final_sha256": "b7b6d5706493ab127dbd6e5381abcec95c69db100cde4b33daf6d015b29ec5d9",
-          "runtime_file": "assets/sfx/capture_clank_v05.wav",
-          "sample_rate": 44100,
-          "source_candidate": 2,
-          "source_sha256": "9437b84fea9db81109d3d607d3f55c374eb72eca06fb7002ce95a3a3e3dc48e6",
-          "variant": 5
-        }
-      ],
-      "candidates": [
-        {
-          "candidate": 6,
-          "combined_score": 0.99993,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_06.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_06.wav",
-          "mastered_preview_sha256": "5d7133373fd83bbc74feb653ce1236accb53b0d473032f6a687daa5ddde11de4",
-          "maximum_selected_waveform_correlation": 0.028911,
-          "metrics": {
-            "active_duration_seconds": 0.433923,
-            "clipping_fraction": 0.0,
-            "crest_factor": 4.97771,
-            "envelope_cv": 0.64484,
-            "event_peaks": 4,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.155329,
-            "source_rms_dbfs": -17.515,
-            "spectral_centroid_hz": 5775.84,
-            "spectral_flatness": 0.0009848,
-            "tail_energy_ratio": 0.00448
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.992991,
-          "semantic_score_normalized_within_cue": 1.0,
-          "shape_score": 0.99978,
-          "source_sha256": "07dae2e52a263d61659cb368c2dca774dee65db6faebe8e80b3919e05707230a"
-        },
-        {
-          "candidate": 12,
-          "combined_score": 0.927668,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_12.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_12.wav",
-          "mastered_preview_sha256": "613d520253d846720926e9af97e56492642b2cdbe861031fecaa0c6653f1f38a",
-          "maximum_selected_waveform_correlation": 0.030113,
-          "metrics": {
-            "active_duration_seconds": 0.26644,
-            "clipping_fraction": 0.0,
-            "crest_factor": 6.80338,
-            "envelope_cv": 1.18951,
-            "event_peaks": 3,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.083084,
-            "source_rms_dbfs": -19.918,
-            "spectral_centroid_hz": 5973.92,
-            "spectral_flatness": 0.0025513,
-            "tail_energy_ratio": 3.1e-05
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.920441,
-          "semantic_score_normalized_within_cue": 0.894619,
-          "shape_score": 0.997897,
-          "source_sha256": "3e4d125f928d83af03f745641a0c2d6491ab098a22583ca81f590631f09fe7f2"
-        },
-        {
-          "candidate": 8,
-          "combined_score": 0.916248,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_08.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_08.wav",
-          "mastered_preview_sha256": "cad631f88866179a07b68a25e34bcde151af76b0973b99afcf0bef449c5cc62c",
-          "maximum_selected_waveform_correlation": 0.018246,
-          "metrics": {
-            "active_duration_seconds": 0.438776,
-            "clipping_fraction": 0.0,
-            "crest_factor": 7.75092,
-            "envelope_cv": 0.88574,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.301338,
-            "source_rms_dbfs": -21.297,
-            "spectral_centroid_hz": 5564.41,
-            "spectral_flatness": 0.001144,
-            "tail_energy_ratio": 0.019662
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.911869,
-          "semantic_score_normalized_within_cue": 0.955319,
-          "shape_score": 0.833222,
-          "source_sha256": "f5153b53f0a19012d95ae471549686298e9bea21c063fbcb85bb83c2c1147209"
-        },
-        {
-          "candidate": 3,
-          "combined_score": 0.880806,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_03.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_03.wav",
-          "mastered_preview_sha256": "a570f6d228570fde24edca252fa06c53361a95fb13f9430b6ba184f7977cb5ba",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.268435,
-            "clipping_fraction": 0.0,
-            "crest_factor": 6.28264,
-            "envelope_cv": 1.0608,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.132676,
-            "source_rms_dbfs": -19.228,
-            "spectral_centroid_hz": 5148.77,
-            "spectral_flatness": 0.0010665,
-            "tail_energy_ratio": 0.000376
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.825635,
-          "shape_score": 0.998043,
-          "source_sha256": "5ba6c52f1396942466aa53fb8bfb21994475dfb94f917f8fb958e3ac4252831a"
-        },
-        {
-          "candidate": 5,
-          "combined_score": 0.869585,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_05.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_05.wav",
-          "mastered_preview_sha256": "12c82b62ee991ca6e4f0af787bf68eb492ea2f9d09395ee4dfc5cf5287e16795",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.266327,
-            "clipping_fraction": 0.0,
-            "crest_factor": 7.67017,
-            "envelope_cv": 1.30101,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.065805,
-            "source_rms_dbfs": -21.366,
-            "spectral_centroid_hz": 5518.49,
-            "spectral_flatness": 0.0008686,
-            "tail_energy_ratio": 0.000265
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.809156,
-          "shape_score": 0.997996,
-          "source_sha256": "58bc43382650b0c3474483870f1ef44e34a4e25d305d841a54b358d70273faaa"
-        },
-        {
-          "candidate": 1,
-          "combined_score": 0.844915,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_01.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_01.wav",
-          "mastered_preview_sha256": "a29f4cdea901215b0a771434c287a401e8ed0929066f7844f45ce1120afc904f",
-          "maximum_selected_waveform_correlation": 0.030113,
-          "metrics": {
-            "active_duration_seconds": 0.262472,
-            "clipping_fraction": 2.268e-05,
-            "crest_factor": 5.81493,
-            "envelope_cv": 1.10316,
-            "event_peaks": 3,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.003107,
-            "source_rms_dbfs": -18.485,
-            "spectral_centroid_hz": 5928.53,
-            "spectral_flatness": 0.0078885,
-            "tail_energy_ratio": 0.000358
-          },
-          "pilot_anchor": true,
-          "selected": true,
-          "selection_score_after_diversity": 0.837688,
-          "semantic_score_normalized_within_cue": 0.772858,
-          "shape_score": 0.998035,
-          "source_sha256": "ae3551c6a0e3a716ca98e4c808d65a6c6cc129596d9f4a0919884837c3788b13"
-        },
-        {
-          "candidate": 7,
-          "combined_score": 0.825034,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_07.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_07.wav",
-          "mastered_preview_sha256": "041abceb4436b586cd1bb9c3be4ae31b623be3d3b7bf69b6a5853b45969b9743",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.319206,
-            "clipping_fraction": 0.00011338,
-            "crest_factor": 6.75919,
-            "envelope_cv": 1.05509,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.010454,
-            "source_rms_dbfs": -19.777,
-            "spectral_centroid_hz": 6140.97,
-            "spectral_flatness": 0.0014516,
-            "tail_energy_ratio": 0.000715
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.74355,
-          "shape_score": 0.998186,
-          "source_sha256": "a0a4380ab749f7b33031723c4831d9d1a06252251f096312dcbb0974c90e54b0"
-        },
-        {
-          "candidate": 9,
-          "combined_score": 0.728688,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_09.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_09.wav",
-          "mastered_preview_sha256": "7f6537752fe7cf473d556296c4af91f26d4ed9d1e8fd46e78b11c9ba4948b408",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.214943,
-            "clipping_fraction": 9.07e-05,
-            "crest_factor": 6.49085,
-            "envelope_cv": 1.22143,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.011361,
-            "source_rms_dbfs": -19.439,
-            "spectral_centroid_hz": 5603.57,
-            "spectral_flatness": 0.0221835,
-            "tail_energy_ratio": 0.001859
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.601637,
-          "shape_score": 0.99867,
-          "source_sha256": "7b572cc06c952e34859a1a6032999be42c5bd76685c6c66a575bfca45baf117c"
-        },
-        {
-          "candidate": 2,
-          "combined_score": 0.658251,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_02.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_02.wav",
-          "mastered_preview_sha256": "b7b6d5706493ab127dbd6e5381abcec95c69db100cde4b33daf6d015b29ec5d9",
-          "maximum_selected_waveform_correlation": 0.016041,
-          "metrics": {
-            "active_duration_seconds": 0.210884,
-            "clipping_fraction": 4.535e-05,
-            "crest_factor": 8.15049,
-            "envelope_cv": 1.42436,
-            "event_peaks": 1,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.038163,
-            "source_rms_dbfs": -21.406,
-            "spectral_centroid_hz": 5472.2,
-            "spectral_flatness": 0.0016302,
-            "tail_energy_ratio": 0.000192
-          },
-          "pilot_anchor": true,
-          "selected": true,
-          "selection_score_after_diversity": 0.654401,
-          "semantic_score_normalized_within_cue": 0.498386,
-          "shape_score": 0.997965,
-          "source_sha256": "9437b84fea9db81109d3d607d3f55c374eb72eca06fb7002ce95a3a3e3dc48e6"
-        },
-        {
-          "candidate": 10,
-          "combined_score": 0.613322,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_10.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_10.wav",
-          "mastered_preview_sha256": "90edfad31b756a55f00f8813540024a224273696d5240cb070badc692727528e",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.230952,
-            "clipping_fraction": 0.00013605,
-            "crest_factor": 5.43169,
-            "envelope_cv": 1.1779,
-            "event_peaks": 3,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.017506,
-            "source_rms_dbfs": -17.878,
-            "spectral_centroid_hz": 5433.12,
-            "spectral_flatness": 0.0075645,
-            "tail_energy_ratio": 0.000192
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.432313,
-          "shape_score": 0.997965,
-          "source_sha256": "9bd640c53b829dc4ccf2894b71b2c3aecd3257f870278b9d784ec6f278f53106"
-        },
-        {
-          "candidate": 4,
-          "combined_score": 0.390486,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_04.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_04.wav",
-          "mastered_preview_sha256": "5218b7ec8c05cf88da28a0a9e6f38369104c8f23df4a1710d2b65dc0690e8f74",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.202404,
-            "clipping_fraction": 2.268e-05,
-            "crest_factor": 7.49002,
-            "envelope_cv": 1.33485,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.035873,
-            "source_rms_dbfs": -20.673,
-            "spectral_centroid_hz": 5585.32,
-            "spectral_flatness": 0.0019325,
-            "tail_energy_ratio": 0.00129
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.104395,
-          "shape_score": 0.99843,
-          "source_sha256": "bbf4b6bf68b096321aab23994111e5c6e75d14fabb5be748ae3ff3920c1cc579"
-        },
-        {
-          "candidate": 11,
-          "combined_score": 0.319344,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/capture/candidate_11.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/capture/candidate_11.wav",
-          "mastered_preview_sha256": "92dc94fb2f12a0ad3125f57d6287ec139d0ffae865528f5e13d3a7b6e772744e",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.264739,
-            "clipping_fraction": 0.00011338,
-            "crest_factor": 5.64419,
-            "envelope_cv": 1.13142,
-            "event_peaks": 3,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.014989,
-            "source_rms_dbfs": -18.219,
-            "spectral_centroid_hz": 6108.02,
-            "spectral_flatness": 0.0051272,
-            "tail_energy_ratio": 0.000157
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.0,
-          "shape_score": 0.99795,
-          "source_sha256": "8a1b0ddfb5109195668b8972774dd6dde1e85881aea53b9a276165b858a0c51e"
-        }
-      ],
-      "id": "capture",
-      "pilot_anchor_candidates": [
-        1,
-        2
-      ],
-      "prompt": "One isolated realistic sword contact: a forged steel longsword blade strikes another steel blade in a hard medieval parry. Sharp physical metal-on-metal transient, solid impact body, brief irregular steel ring, close-miked dry Foley. Exactly one strike. No sword swing or whoosh before it, no repeated clashes, no explosion, no bass boom, no music, no crowd, no voices, no large hall reverb.",
-      "requested_variants": 5,
-      "selected_candidates": [
-        6,
-        12,
-        8,
-        1,
-        2
-      ],
-      "target_duration_seconds": 0.48
-    },
-    {
-      "artifacts": [
-        {
-          "channels": 1,
-          "duration_seconds": 0.76,
-          "final_sha256": "1110c26dbb53bd5b1e826f7e95aaa5e4728fc25a3c3eb2daaaf656a0515b3ac4",
-          "runtime_file": "assets/sfx/fall_thud.wav",
-          "sample_rate": 44100,
-          "source_candidate": 5,
-          "source_sha256": "93ab5d36f7c8e2861d19df5080b99ed7963ee553344a7477613bc5931bb0d43f",
-          "variant": 1
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.76,
-          "final_sha256": "278d7a7a03c15eaa0fc6ffab138b842c654211fffebf8ce51d78ca13ea3b2c5f",
-          "runtime_file": "assets/sfx/fall_thud_v02.wav",
-          "sample_rate": 44100,
-          "source_candidate": 6,
-          "source_sha256": "53bd4978008f71ba961ff4bad281e91bf58a72c86b3e032bb962b4277aa4631a",
-          "variant": 2
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.76,
-          "final_sha256": "0c6f6f1124a0b3794ffda78fc1b3a3a36e39bd6dafd1bca334ba8c46cc163b2b",
-          "runtime_file": "assets/sfx/fall_thud_v03.wav",
-          "sample_rate": 44100,
-          "source_candidate": 1,
-          "source_sha256": "d9d3b247d29c2c69b462dd30272ae72f6f90e22380602e0ebfd7d4ab3a6b7592",
-          "variant": 3
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.76,
-          "final_sha256": "05e8b6d4b546ff6b7338a2b019d284552c387baac6d83becfbfd8dd119bcbd5f",
-          "runtime_file": "assets/sfx/fall_thud_v04.wav",
-          "sample_rate": 44100,
-          "source_candidate": 2,
-          "source_sha256": "e4aad03c80d99110d475a528b6ef7752f8ce504e16591e3caea14ab5898ce1b8",
-          "variant": 4
-        }
-      ],
-      "candidates": [
-        {
-          "candidate": 5,
-          "combined_score": 0.938752,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/fall/candidate_05.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/fall/candidate_05.wav",
-          "mastered_preview_sha256": "1110c26dbb53bd5b1e826f7e95aaa5e4728fc25a3c3eb2daaaf656a0515b3ac4",
-          "maximum_selected_waveform_correlation": 0.082566,
-          "metrics": {
-            "active_duration_seconds": 0.134467,
-            "clipping_fraction": 0.0,
-            "crest_factor": 13.87799,
-            "envelope_cv": 2.3795,
-            "event_peaks": 3,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.012313,
-            "source_rms_dbfs": -30.195,
-            "spectral_centroid_hz": 648.76,
-            "spectral_flatness": 0.0036198,
-            "tail_energy_ratio": 3e-06
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.918936,
-          "semantic_score_normalized_within_cue": 1.0,
-          "shape_score": 0.808601,
-          "source_sha256": "93ab5d36f7c8e2861d19df5080b99ed7963ee553344a7477613bc5931bb0d43f"
-        },
-        {
-          "candidate": 6,
-          "combined_score": 0.922028,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/fall/candidate_06.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/fall/candidate_06.wav",
-          "mastered_preview_sha256": "278d7a7a03c15eaa0fc6ffab138b842c654211fffebf8ce51d78ca13ea3b2c5f",
-          "maximum_selected_waveform_correlation": 0.028001,
-          "metrics": {
-            "active_duration_seconds": 0.213946,
-            "clipping_fraction": 0.00039836,
-            "crest_factor": 7.00753,
-            "envelope_cv": 2.15309,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.093651,
-            "source_rms_dbfs": -19.804,
-            "spectral_centroid_hz": 1863.03,
-            "spectral_flatness": 0.0090522,
-            "tail_energy_ratio": 6e-06
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.915308,
-          "semantic_score_normalized_within_cue": 0.895412,
-          "shape_score": 0.978587,
-          "source_sha256": "53bd4978008f71ba961ff4bad281e91bf58a72c86b3e032bb962b4277aa4631a"
-        },
-        {
-          "candidate": 7,
-          "combined_score": 0.895321,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/fall/candidate_07.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/fall/candidate_07.wav",
-          "mastered_preview_sha256": "142a54f4e143d47ef908aab6e235f75e3656294c3872174e94d9f98f4cfa111b",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.195057,
-            "clipping_fraction": 6.129e-05,
-            "crest_factor": 8.0212,
-            "envelope_cv": 1.93545,
-            "event_peaks": 2,
-            "onset_seconds": 0.030249,
-            "peak_time_seconds": 0.11542,
-            "source_rms_dbfs": -20.977,
-            "spectral_centroid_hz": 2040.11,
-            "spectral_flatness": 0.0128909,
-            "tail_energy_ratio": 8e-06
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.862721,
-          "shape_score": 0.964596,
-          "source_sha256": "69092bff4d837635811026e71f02edad1f8c0793dce21d730f9527a902b347b6"
-        },
-        {
-          "candidate": 3,
-          "combined_score": 0.778641,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/fall/candidate_03.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/fall/candidate_03.wav",
-          "mastered_preview_sha256": "833431364ed4e0abe845edcd0f724ae6902e493841440de25cc5eb209c8de268",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.149705,
-            "clipping_fraction": 0.00041368,
-            "crest_factor": 6.61081,
-            "envelope_cv": 2.65698,
-            "event_peaks": 1,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.004444,
-            "source_rms_dbfs": -19.296,
-            "spectral_centroid_hz": 894.26,
-            "spectral_flatness": 0.0024543,
-            "tail_energy_ratio": 3e-06
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.733086,
-          "shape_score": 0.875444,
-          "source_sha256": "7e773d653b42c3565f685f85459135790bcb18b062554436d84dd5716b3fe6fe"
-        },
-        {
-          "candidate": 9,
-          "combined_score": 0.746829,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/fall/candidate_09.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/fall/candidate_09.wav",
-          "mastered_preview_sha256": "951ea1e0a421c46d781e4a94091d302d7e84470dc353428442e45c927e7a0b43",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.307007,
-            "clipping_fraction": 0.00039836,
-            "crest_factor": 5.33104,
-            "envelope_cv": 1.65243,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.071995,
-            "source_rms_dbfs": -17.43,
-            "spectral_centroid_hz": 3505.86,
-            "spectral_flatness": 0.0193365,
-            "tail_energy_ratio": 2e-05
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.628681,
-          "shape_score": 0.997892,
-          "source_sha256": "14ab24bd4d13eb688cb077d92c7eb456c6a998a236313c9f299f6a4763f01e38"
-        },
-        {
-          "candidate": 1,
-          "combined_score": 0.683088,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/fall/candidate_01.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/fall/candidate_01.wav",
-          "mastered_preview_sha256": "0c6f6f1124a0b3794ffda78fc1b3a3a36e39bd6dafd1bca334ba8c46cc163b2b",
-          "maximum_selected_waveform_correlation": 0.082566,
-          "metrics": {
-            "active_duration_seconds": 0.759909,
-            "clipping_fraction": 0.0,
-            "crest_factor": 11.41318,
-            "envelope_cv": 0.60514,
-            "event_peaks": 4,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.014127,
-            "source_rms_dbfs": -52.898,
-            "spectral_centroid_hz": 10.38,
-            "spectral_flatness": 0.0001454,
-            "tail_energy_ratio": 0.058979
-          },
-          "pilot_anchor": true,
-          "selected": true,
-          "selection_score_after_diversity": 0.663272,
-          "semantic_score_normalized_within_cue": 0.581317,
-          "shape_score": 0.899351,
-          "source_sha256": "d9d3b247d29c2c69b462dd30272ae72f6f90e22380602e0ebfd7d4ab3a6b7592"
-        },
-        {
-          "candidate": 10,
-          "combined_score": 0.678651,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/fall/candidate_10.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/fall/candidate_10.wav",
-          "mastered_preview_sha256": "fb4f9318f7f152fcbf5ee0f457264b79426795662833a38dde8b99169ca61418",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.278073,
-            "clipping_fraction": 7.661e-05,
-            "crest_factor": 8.90213,
-            "envelope_cv": 2.47804,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.009184,
-            "source_rms_dbfs": -21.884,
-            "spectral_centroid_hz": 979.73,
-            "spectral_flatness": 0.001789,
-            "tail_energy_ratio": 0.000128
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.528399,
-          "shape_score": 0.997938,
-          "source_sha256": "5d7247483a9955cc6cc6fa1334f02f7041747618118f42905de141eecbd79fd7"
-        },
-        {
-          "candidate": 8,
-          "combined_score": 0.490801,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/fall/candidate_08.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/fall/candidate_08.wav",
-          "mastered_preview_sha256": "8c811ac412831992469c7752527eebf70ad869eab3db1b9376b1bc1e1cf45413",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.264535,
-            "clipping_fraction": 0.00019918,
-            "crest_factor": 7.41183,
-            "envelope_cv": 1.84502,
-            "event_peaks": 2,
-            "onset_seconds": 0.042426,
-            "peak_time_seconds": 0.044082,
-            "source_rms_dbfs": -20.292,
-            "spectral_centroid_hz": 2884.74,
-            "spectral_flatness": 0.0122426,
-            "tail_energy_ratio": 1.2e-05
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.252172,
-          "shape_score": 0.997889,
-          "source_sha256": "edb2fd5835db0ff75f270cc8ebacb58a4d852d621ef0ae84a00b2e58487cc04e"
-        },
-        {
-          "candidate": 2,
-          "combined_score": 0.33675,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/fall/candidate_02.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/fall/candidate_02.wav",
-          "mastered_preview_sha256": "05e8b6d4b546ff6b7338a2b019d284552c387baac6d83becfbfd8dd119bcbd5f",
-          "maximum_selected_waveform_correlation": 0.0301,
-          "metrics": {
-            "active_duration_seconds": 0.245034,
-            "clipping_fraction": 0.0,
-            "crest_factor": 8.51824,
-            "envelope_cv": 1.82377,
-            "event_peaks": 1,
-            "onset_seconds": 0.027075,
-            "peak_time_seconds": 0.038889,
-            "source_rms_dbfs": -21.665,
-            "spectral_centroid_hz": 2798.61,
-            "spectral_flatness": 0.0029826,
-            "tail_energy_ratio": 0.000255
-          },
-          "pilot_anchor": true,
-          "selected": true,
-          "selection_score_after_diversity": 0.329526,
-          "semantic_score_normalized_within_cue": 0.051722,
-          "shape_score": 0.942436,
-          "source_sha256": "e4aad03c80d99110d475a528b6ef7752f8ce504e16591e3caea14ab5898ce1b8"
-        },
-        {
-          "candidate": 4,
-          "combined_score": 0.319326,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/fall/candidate_04.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/fall/candidate_04.wav",
-          "mastered_preview_sha256": "f52de3fd077d0b2275c1c78c66ef97054bdf8a391bd77807d0cb8a5e405a6458",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.310204,
-            "clipping_fraction": 0.0002145,
-            "crest_factor": 5.74699,
-            "envelope_cv": 1.8875,
-            "event_peaks": 4,
-            "onset_seconds": 0.048413,
-            "peak_time_seconds": 0.033288,
-            "source_rms_dbfs": -18.071,
-            "spectral_centroid_hz": 2843.84,
-            "spectral_flatness": 0.0094954,
-            "tail_energy_ratio": 2.3e-05
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.0,
-          "shape_score": 0.997893,
-          "source_sha256": "e9dfe8d136c407d0b3d93885f0bb2cbdbf9774532bfef97685cbf7167fb866a7"
-        }
-      ],
-      "id": "fall",
-      "pilot_anchor_candidates": [
-        1,
-        2
-      ],
-      "prompt": "One isolated realistic armored fall: a human-sized medieval fighter in plate and leather collapses heavily onto a solid wooden floor. Deep body thud followed immediately by a short loose armor clatter and leather movement, close-miked dry Foley, natural decay. One fall only. No footsteps, no sword strike, no vocal grunt, no music, no ambience, no cinematic sub-bass, no long reverb.",
-      "requested_variants": 4,
-      "selected_candidates": [
-        5,
-        6,
-        1,
-        2
-      ],
-      "target_duration_seconds": 0.76
-    },
-    {
-      "artifacts": [
-        {
-          "channels": 1,
-          "duration_seconds": 1.2,
-          "final_sha256": "5614ac42f527852f370ccf3b4b3b235313c002570d0d97ac1b9d9e8a16972028",
-          "runtime_file": "assets/sfx/start_trumpet.wav",
-          "sample_rate": 44100,
-          "source_candidate": 5,
-          "source_sha256": "0013aa43352fab1dacf4d436004ada332f89888476261382b0f5592a7e6a1ac5",
-          "variant": 1
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 1.2,
-          "final_sha256": "644b6e3d28abad36cc92b220c835e2fa57e3ec309eb80a15e775d9c491a5f450",
-          "runtime_file": "assets/sfx/start_trumpet_v02.wav",
-          "sample_rate": 44100,
-          "source_candidate": 1,
-          "source_sha256": "c366319ce58483dcaa5a5ce4b43802799f7faa23e3e0dbabe6b1cd904fe825bf",
-          "variant": 2
-        }
-      ],
-      "candidates": [
-        {
-          "candidate": 5,
-          "combined_score": 0.995698,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/start_trumpet/candidate_05.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/start_trumpet/candidate_05.wav",
-          "mastered_preview_sha256": "5614ac42f527852f370ccf3b4b3b235313c002570d0d97ac1b9d9e8a16972028",
-          "maximum_selected_waveform_correlation": 0.039378,
-          "metrics": {
-            "active_duration_seconds": 1.197914,
-            "clipping_fraction": 4.572e-05,
-            "crest_factor": 3.71369,
-            "envelope_cv": 0.75843,
-            "event_peaks": 10,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 1.059751,
-            "source_rms_dbfs": -12.974,
-            "spectral_centroid_hz": 1576.95,
-            "spectral_flatness": 2.19e-05,
-            "tail_energy_ratio": 0.513877
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.986247,
-          "semantic_score_normalized_within_cue": 1.0,
-          "shape_score": 0.986557,
-          "source_sha256": "0013aa43352fab1dacf4d436004ada332f89888476261382b0f5592a7e6a1ac5"
-        },
-        {
-          "candidate": 1,
-          "combined_score": 0.829434,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/start_trumpet/candidate_01.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/start_trumpet/candidate_01.wav",
-          "mastered_preview_sha256": "644b6e3d28abad36cc92b220c835e2fa57e3ec309eb80a15e775d9c491a5f450",
-          "maximum_selected_waveform_correlation": 0.039378,
-          "metrics": {
-            "active_duration_seconds": 1.2,
-            "clipping_fraction": 9.14e-06,
-            "crest_factor": 5.94576,
-            "envelope_cv": 1.02507,
-            "event_peaks": 8,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.652902,
-            "source_rms_dbfs": -15.226,
-            "spectral_centroid_hz": 1324.03,
-            "spectral_flatness": 1.24e-05,
-            "tail_energy_ratio": 0.243511
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.819983,
-          "semantic_score_normalized_within_cue": 0.749167,
-          "shape_score": 1.0,
-          "source_sha256": "c366319ce58483dcaa5a5ce4b43802799f7faa23e3e0dbabe6b1cd904fe825bf"
-        },
-        {
-          "candidate": 3,
-          "combined_score": 0.796086,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/start_trumpet/candidate_03.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/start_trumpet/candidate_03.wav",
-          "mastered_preview_sha256": "6ab393592624d590179eb863eb7a2e266d89836eb3a26b0459b57fa3af01e5d6",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 1.167959,
-            "clipping_fraction": 0.0,
-            "crest_factor": 5.78896,
-            "envelope_cv": 0.81984,
-            "event_peaks": 11,
-            "onset_seconds": 0.009478,
-            "peak_time_seconds": 0.061156,
-            "source_rms_dbfs": -17.516,
-            "spectral_centroid_hz": 1374.12,
-            "spectral_flatness": 1.12e-05,
-            "tail_energy_ratio": 0.425764
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.72627,
-          "shape_score": 0.944444,
-          "source_sha256": "984cc471c277610d2cee5eac6c7c2bdb862804add631ac014e0d6c724c26ecb7"
-        },
-        {
-          "candidate": 4,
-          "combined_score": 0.587572,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/start_trumpet/candidate_04.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/start_trumpet/candidate_04.wav",
-          "mastered_preview_sha256": "052800c4cfd94ebb7157409530751f889a16919f4ddd923d962de876d4ffa455",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 1.19059,
-            "clipping_fraction": 5.486e-05,
-            "crest_factor": 2.46305,
-            "envelope_cv": 0.33944,
-            "event_peaks": 10,
-            "onset_seconds": 0.004036,
-            "peak_time_seconds": 0.649569,
-            "source_rms_dbfs": -10.654,
-            "spectral_centroid_hz": 1666.15,
-            "spectral_flatness": 5.73e-05,
-            "tail_energy_ratio": 0.281348
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.393488,
-          "shape_score": 1.0,
-          "source_sha256": "c7baf75e3f494ae61ba43a36e89a3e2a46fd86e4284e12f559e71b274fef5e57"
-        },
-        {
-          "candidate": 6,
-          "combined_score": 0.276177,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/start_trumpet/candidate_06.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/start_trumpet/candidate_06.wav",
-          "mastered_preview_sha256": "0c06f9b36ab454bd2c8f4fa0e2fb7fcb602c27b99001f4892863a1b73be1270b",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 1.2,
-            "clipping_fraction": 0.0,
-            "crest_factor": 3.20864,
-            "envelope_cv": 0.69617,
-            "event_peaks": 16,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.897937,
-            "source_rms_dbfs": -11.696,
-            "spectral_centroid_hz": 1635.98,
-            "spectral_flatness": 2.9e-05,
-            "tail_energy_ratio": 0.449203
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.040129,
-          "shape_score": 0.777778,
-          "source_sha256": "0311ee851a44de1cd47445380367f801d464e97c641883581df4ba52cf3d3471"
-        },
-        {
-          "candidate": 2,
-          "combined_score": 0.248889,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/start_trumpet/candidate_02.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/start_trumpet/candidate_02.wav",
-          "mastered_preview_sha256": "01f7be9e3ec438417110f4dc01eb078318df97306c18c90f65752bef5459c3f4",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 1.188707,
-            "clipping_fraction": 0.0,
-            "crest_factor": 4.56381,
-            "envelope_cv": 0.63593,
-            "event_peaks": 17,
-            "onset_seconds": 0.02932,
-            "peak_time_seconds": 0.773424,
-            "source_rms_dbfs": -16.427,
-            "spectral_centroid_hz": 1591.09,
-            "spectral_flatness": 1.09e-05,
-            "tail_energy_ratio": 0.340009
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.0,
-          "shape_score": 0.777778,
-          "source_sha256": "3c84ed06dcb560e994fb2d4fe53d8d71c5b6a3b7dcc52efbc4ea72c395784007"
-        }
-      ],
-      "id": "start_trumpet",
-      "pilot_anchor_candidates": [],
-      "prompt": "A very short medieval battle-start herald cue played by two real natural trumpets: four bold notes, immediate confident attack, ceremonial but compact, ending cleanly. Isolated studio recording. No percussion, no orchestra, no crowd, no speech, no battle sounds, no long reverb, no modern synthesizer.",
-      "requested_variants": 2,
-      "selected_candidates": [
-        5,
-        1
-      ],
-      "target_duration_seconds": 1.2
-    },
-    {
-      "artifacts": [
-        {
-          "channels": 1,
-          "duration_seconds": 2.3,
-          "final_sha256": "5fcd349d4902e8a85df22e9bded38d711ffbd87295ea7b376f4d9a3791f28731",
-          "runtime_file": "assets/sfx/win_trumpet.wav",
-          "sample_rate": 44100,
-          "source_candidate": 5,
-          "source_sha256": "80ba106fb5a6290f530a85eeb837d9f1635c01b7389692ad43fd1d2c8e798a3c",
-          "variant": 1
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 2.3,
-          "final_sha256": "89aa568efa1f34552c2911595ab1915c548859f2499c9287d627787cc1188db1",
-          "runtime_file": "assets/sfx/win_trumpet_v02.wav",
-          "sample_rate": 44100,
-          "source_candidate": 6,
-          "source_sha256": "ee476d0d2f5b0ec5977265dbbd7826740bbf309cf010ea8b16884f8995b539d1",
-          "variant": 2
-        }
-      ],
-      "candidates": [
-        {
-          "candidate": 5,
-          "combined_score": 0.928889,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/win_trumpet/candidate_05.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/win_trumpet/candidate_05.wav",
-          "mastered_preview_sha256": "5fcd349d4902e8a85df22e9bded38d711ffbd87295ea7b376f4d9a3791f28731",
-          "maximum_selected_waveform_correlation": 0.067079,
-          "metrics": {
-            "active_duration_seconds": 2.197029,
-            "clipping_fraction": 0.0,
-            "crest_factor": 3.97552,
-            "envelope_cv": 0.39282,
-            "event_peaks": 39,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.365828,
-            "source_rms_dbfs": -14.551,
-            "spectral_centroid_hz": 1981.42,
-            "spectral_flatness": 5.19e-05,
-            "tail_energy_ratio": 0.101763
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.91279,
-          "semantic_score_normalized_within_cue": 1.0,
-          "shape_score": 0.777778,
-          "source_sha256": "80ba106fb5a6290f530a85eeb837d9f1635c01b7389692ad43fd1d2c8e798a3c"
-        },
-        {
-          "candidate": 6,
-          "combined_score": 0.756448,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/win_trumpet/candidate_06.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/win_trumpet/candidate_06.wav",
-          "mastered_preview_sha256": "89aa568efa1f34552c2911595ab1915c548859f2499c9287d627787cc1188db1",
-          "maximum_selected_waveform_correlation": 0.067079,
-          "metrics": {
-            "active_duration_seconds": 1.947098,
-            "clipping_fraction": 1.701e-05,
-            "crest_factor": 4.38448,
-            "envelope_cv": 0.63664,
-            "event_peaks": 31,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 1.096236,
-            "source_rms_dbfs": -15.24,
-            "spectral_centroid_hz": 2023.29,
-            "spectral_flatness": 0.0003189,
-            "tail_energy_ratio": 0.049475
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.740349,
-          "semantic_score_normalized_within_cue": 0.746411,
-          "shape_score": 0.777778,
-          "source_sha256": "ee476d0d2f5b0ec5977265dbbd7826740bbf309cf010ea8b16884f8995b539d1"
-        },
-        {
-          "candidate": 1,
-          "combined_score": 0.39658,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/win_trumpet/candidate_01.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/win_trumpet/candidate_01.wav",
-          "mastered_preview_sha256": "035e09215dbb9c6f877f13ad84ca9ba5a5b3e0800e9c4f293ea70dc0cff3b8c0",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 2.297914,
-            "clipping_fraction": 5.67e-06,
-            "crest_factor": 4.40349,
-            "envelope_cv": 0.52176,
-            "event_peaks": 38,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 1.118254,
-            "source_rms_dbfs": -15.281,
-            "spectral_centroid_hz": 1941.15,
-            "spectral_flatness": 5.49e-05,
-            "tail_energy_ratio": 0.255391
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.217192,
-          "shape_score": 0.777778,
-          "source_sha256": "3f21423b45d9a9b9c50e0418826e49e208bba43a22352231b8825f55596db511"
-        },
-        {
-          "candidate": 2,
-          "combined_score": 0.312316,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/win_trumpet/candidate_02.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/win_trumpet/candidate_02.wav",
-          "mastered_preview_sha256": "c971d488e1e9e950b936fdb93b67b56bd3dfed5a4e1973cc77d49615a8f6c8f1",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 2.139274,
-            "clipping_fraction": 0.0,
-            "crest_factor": 4.36506,
-            "envelope_cv": 0.66715,
-            "event_peaks": 26,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 1.021474,
-            "source_rms_dbfs": -16.252,
-            "spectral_centroid_hz": 1815.3,
-            "spectral_flatness": 3.8e-05,
-            "tail_energy_ratio": 0.053018
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.093275,
-          "shape_score": 0.777778,
-          "source_sha256": "452d43746a6664dd4057badf1e8a612626a1d97eaaf021d38b3c0a3c83cabc65"
-        },
-        {
-          "candidate": 3,
-          "combined_score": 0.311618,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/win_trumpet/candidate_03.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/win_trumpet/candidate_03.wav",
-          "mastered_preview_sha256": "510fff202a8a59a16e500dcf0e2f83d82697e13e0c964bccc3925843cdc60c2c",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 1.717937,
-            "clipping_fraction": 1.134e-05,
-            "crest_factor": 4.49154,
-            "envelope_cv": 0.7742,
-            "event_peaks": 26,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.68517,
-            "source_rms_dbfs": -15.454,
-            "spectral_centroid_hz": 2081.91,
-            "spectral_flatness": 0.0005086,
-            "tail_energy_ratio": 0.000847
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.095615,
-          "shape_score": 0.770624,
-          "source_sha256": "7a34fce214c0daf5ff1984bbf05b7dd87e400aeb3e5482081a77d705da63b412"
-        },
-        {
-          "candidate": 4,
-          "combined_score": 0.248889,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/win_trumpet/candidate_04.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/win_trumpet/candidate_04.wav",
-          "mastered_preview_sha256": "77163f2e8e2e28d198ad116e9e8a401453dcf4ee12c630a5d72b44ef38a32902",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 2.3,
-            "clipping_fraction": 0.0,
-            "crest_factor": 4.27794,
-            "envelope_cv": 0.39889,
-            "event_peaks": 28,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 1.161927,
-            "source_rms_dbfs": -15.129,
-            "spectral_centroid_hz": 2177.09,
-            "spectral_flatness": 0.000169,
-            "tail_energy_ratio": 0.246585
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.0,
-          "shape_score": 0.777778,
-          "source_sha256": "c0bdabfd936a4851850785e1a0b70b800ef76a84d0ae6a9f4310dece4b8096e6"
-        }
-      ],
-      "id": "win_trumpet",
-      "pilot_anchor_candidates": [],
-      "prompt": "A concise triumphant medieval victory fanfare played by a small group of real herald trumpets: clear rising phrase, strong resolved final chord, about three seconds, celebratory and memorable. Isolated clean recording. No drums, no full orchestra, no crowd, no speech, no battle noise, no modern synthesizer, no long reverb tail.",
-      "requested_variants": 2,
-      "selected_candidates": [
-        5,
-        6
-      ],
-      "target_duration_seconds": 2.3
-    },
-    {
-      "artifacts": [
-        {
-          "channels": 1,
-          "duration_seconds": 0.44,
-          "final_sha256": "7e98d82bee2ecff5edac346ce66d309f7c0ec88c0ebdd3ba6f0b693e11bd4096",
-          "runtime_file": "assets/sfx/check.wav",
-          "sample_rate": 44100,
-          "source_candidate": 1,
-          "source_sha256": "3588cd6eb66364cd26eef9beccc8c4a546369966ec21ad675d9b80644310ce65",
-          "variant": 1
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.44,
-          "final_sha256": "dd6a5cbdf6d56fe62a55b9d138917beb3580e2328414433b35e4bbecfe764fa0",
-          "runtime_file": "assets/sfx/check_v02.wav",
-          "sample_rate": 44100,
-          "source_candidate": 6,
-          "source_sha256": "5326f937c2d8e8e2bfc2f2f488a166a51e498a7367201a97123bd97e183c3010",
-          "variant": 2
-        },
-        {
-          "channels": 1,
-          "duration_seconds": 0.44,
-          "final_sha256": "29b36a9576f6348926ec51b34248bf219d0ef6c48d032e5d5e27e45be85171d5",
-          "runtime_file": "assets/sfx/check_v03.wav",
-          "sample_rate": 44100,
-          "source_candidate": 2,
-          "source_sha256": "860b923944c55efdbdf29e6c7138869593c8b9505a63032f88d053332fb3b8eb",
-          "variant": 3
-        }
-      ],
-      "candidates": [
-        {
-          "candidate": 1,
-          "combined_score": 1.0,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/check/candidate_01.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/check/candidate_01.wav",
-          "mastered_preview_sha256": "7e98d82bee2ecff5edac346ce66d309f7c0ec88c0ebdd3ba6f0b693e11bd4096",
-          "maximum_selected_waveform_correlation": 0.006361,
-          "metrics": {
-            "active_duration_seconds": 0.343673,
-            "clipping_fraction": 0.0,
-            "crest_factor": 8.46571,
-            "envelope_cv": 0.95119,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.006984,
-            "source_rms_dbfs": -34.135,
-            "spectral_centroid_hz": 4254.57,
-            "spectral_flatness": 2.85e-05,
-            "tail_energy_ratio": 0.006377
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.998473,
-          "semantic_score_normalized_within_cue": 1.0,
-          "shape_score": 1.0,
-          "source_sha256": "3588cd6eb66364cd26eef9beccc8c4a546369966ec21ad675d9b80644310ce65"
-        },
-        {
-          "candidate": 6,
-          "combined_score": 0.93216,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/check/candidate_06.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/check/candidate_06.wav",
-          "mastered_preview_sha256": "dd6a5cbdf6d56fe62a55b9d138917beb3580e2328414433b35e4bbecfe764fa0",
-          "maximum_selected_waveform_correlation": 0.006361,
-          "metrics": {
-            "active_duration_seconds": 0.269478,
-            "clipping_fraction": 0.0,
-            "crest_factor": 8.18582,
-            "envelope_cv": 1.14161,
-            "event_peaks": 1,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.030748,
-            "source_rms_dbfs": -25.568,
-            "spectral_centroid_hz": 4787.14,
-            "spectral_flatness": 0.0003309,
-            "tail_energy_ratio": 0.001405
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.930633,
-          "semantic_score_normalized_within_cue": 0.935093,
-          "shape_score": 0.925926,
-          "source_sha256": "5326f937c2d8e8e2bfc2f2f488a166a51e498a7367201a97123bd97e183c3010"
-        },
-        {
-          "candidate": 2,
-          "combined_score": 0.90702,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/check/candidate_02.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/check/candidate_02.wav",
-          "mastered_preview_sha256": "29b36a9576f6348926ec51b34248bf219d0ef6c48d032e5d5e27e45be85171d5",
-          "maximum_selected_waveform_correlation": 0.004859,
-          "metrics": {
-            "active_duration_seconds": 0.439229,
-            "clipping_fraction": 0.0,
-            "crest_factor": 8.38442,
-            "envelope_cv": 0.6033,
-            "event_peaks": 4,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.072222,
-            "source_rms_dbfs": -26.213,
-            "spectral_centroid_hz": 6362.69,
-            "spectral_flatness": 0.0008711,
-            "tail_energy_ratio": 0.023603
-          },
-          "pilot_anchor": false,
-          "selected": true,
-          "selection_score_after_diversity": 0.905854,
-          "semantic_score_normalized_within_cue": 0.863264,
-          "shape_score": 1.0,
-          "source_sha256": "860b923944c55efdbdf29e6c7138869593c8b9505a63032f88d053332fb3b8eb"
-        },
-        {
-          "candidate": 3,
-          "combined_score": 0.763195,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/check/candidate_03.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/check/candidate_03.wav",
-          "mastered_preview_sha256": "5130ebd31759bce3b1a2b3e357d98b3222c6914f8eac89b142829a4c268992ff",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.255125,
-            "clipping_fraction": 0.0,
-            "crest_factor": 6.38353,
-            "envelope_cv": 1.12678,
-            "event_peaks": 1,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.009184,
-            "source_rms_dbfs": -27.667,
-            "spectral_centroid_hz": 6666.24,
-            "spectral_flatness": 0.00026,
-            "tail_energy_ratio": 0.00291
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.686615,
-          "shape_score": 0.925926,
-          "source_sha256": "3b0cb1a153576d76b31c77a48e2ff04d374f30db4232c621eff49a5486411ad4"
-        },
-        {
-          "candidate": 5,
-          "combined_score": 0.756651,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/check/candidate_05.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/check/candidate_05.wav",
-          "mastered_preview_sha256": "d17160c4b498d42f6ff70bb80c57c1a39cc552486773de87e89f83685f777c29",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.292517,
-            "clipping_fraction": 0.0,
-            "crest_factor": 7.03953,
-            "envelope_cv": 1.04099,
-            "event_peaks": 3,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.003447,
-            "source_rms_dbfs": -37.11,
-            "spectral_centroid_hz": 5566.94,
-            "spectral_flatness": 0.0004941,
-            "tail_energy_ratio": 0.0023
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.642134,
-          "shape_score": 1.0,
-          "source_sha256": "fcf57fc29449858450e093aca943f8957e9e6d2ceaf99c7a63a60d083392ad32"
-        },
-        {
-          "candidate": 4,
-          "combined_score": 0.32,
-          "decoded_candidate": "review/elevenlabs-v2/chess-bash/check/candidate_04.wav",
-          "mastered_preview": "mastered/elevenlabs-v2/chess-bash/candidate-previews/check/candidate_04.wav",
-          "mastered_preview_sha256": "f939d7fea4c21e409d71df8549ee2b61b422cefd87905518921f0b948b019efb",
-          "maximum_selected_waveform_correlation": null,
-          "metrics": {
-            "active_duration_seconds": 0.437347,
-            "clipping_fraction": 0.0,
-            "crest_factor": 6.33236,
-            "envelope_cv": 0.82434,
-            "event_peaks": 2,
-            "onset_seconds": 0.0,
-            "peak_time_seconds": 0.011247,
-            "source_rms_dbfs": -39.284,
-            "spectral_centroid_hz": 2849.49,
-            "spectral_flatness": 6.41e-05,
-            "tail_energy_ratio": 0.011802
-          },
-          "pilot_anchor": false,
-          "selected": false,
-          "selection_score_after_diversity": null,
-          "semantic_score_normalized_within_cue": 0.0,
-          "shape_score": 1.0,
-          "source_sha256": "9cd566654979d5155bcbd5f1cb8f00d5bd85854d7a983950b91ec9d90b18d85d"
-        }
-      ],
-      "id": "check",
-      "pilot_anchor_candidates": [],
-      "prompt": "One compact medieval danger warning for a chess check: three quick tense strikes on a small forged-steel signal bell, the middle strike slightly lower and the last resolving sharply. Dry close recording, urgent and unmistakable, clean short decay. No voice saying check, no music bed, no footsteps, no sword clash, no ambience, no long reverb.",
-      "requested_variants": 3,
-      "selected_candidates": [
-        1,
-        6,
-        2
-      ],
-      "target_duration_seconds": 0.44
-    }
-  ],
-  "generated_at": "2026-07-15T00:13:29.108572+00:00",
-  "mastering": {
-    "description": "onset trim, exact duration fit, equal-power mono downmix, DC removal, 24 Hz high-pass, short edge fades, and 4x reconstructed-peak gain staging",
-    "procedural_layer": null,
-    "runtime_format": "mono 44100 Hz signed 16-bit PCM WAV",
-    "saturation_drive": 0.0
+ "schema": 1,
+ "provider": "local generators (python_sound_assets)",
+ "licence": "CC0-derived",
+ "licence_basis": "Every runtime asset is generated locally. SFX are procedural DSP (combat_generators, ui_game_state_generator; CC0 by construction) or Strudel pure-synth patterns (music_sound_generator; synthesised waveforms only). Music is locally-generated Strudel (see music). No ElevenLabs or other restricted assets remain.",
+ "pack": "chess-bash",
+ "promoted": true,
+ "reproducibility": "Procedural cues: re-running the recorded command at its seed reproduces final_sha256. Strudel cues: real-time captures are not byte-deterministic; the reproducible pin is the pattern text (pattern_sha256).",
+ "standalone_distribution": "intended only as bundled chess-bash game assets.",
+ "generated_at": "2026-07-16",
+ "mastering": {
+  "description": "onset trim, exact duration fit, equal-power mono downmix, DC removal, 24 Hz high-pass, short edge fades, and 4x reconstructed-peak gain staging",
+  "procedural_layer": null,
+  "runtime_format": "mono 44100 Hz signed 16-bit PCM WAV",
+  "saturation_drive": 0.0
+ },
+ "generators": [
+  {
+   "package": "combat_generators",
+   "cues": [
+    "move_step",
+    "capture_clank",
+    "fall_thud"
+   ]
   },
-  "model": "eleven_text_to_sound_v2",
-  "pack": "chess-bash",
-  "promoted": true,
-  "promoted_artifacts": [
-    {
-      "channels": 1,
-      "duration_seconds": 0.14,
-      "final_sha256": "2418b98d07476fdfce310815ac150ba2fa3c2ec07db70e91347d94ee73991012",
-      "game_asset": "assets/sfx/select.wav",
-      "runtime_file": "assets/sfx/select.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/select.wav",
-      "source_candidate": 6,
-      "source_sha256": "072c921279fe8643056c1f4d56350b76eb8db8e7ffe7589279ddaac81458668e",
-      "variant": 1
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.14,
-      "final_sha256": "c07bd916d51235e60b76f7e51dfaf77edddc5cbd16432485d7cc5f6563c847b6",
-      "game_asset": "assets/sfx/select_v02.wav",
-      "runtime_file": "assets/sfx/select_v02.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/select_v02.wav",
-      "source_candidate": 2,
-      "source_sha256": "acbbd0562d4467a6f7f8618c4858b486530de5df634d3b8d7017c38620dd0650",
-      "variant": 2
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.14,
-      "final_sha256": "ad8edee416864a9ec81a5495652cf9f19d7f670fc895b3d9d966731e87082230",
-      "game_asset": "assets/sfx/select_v03.wav",
-      "runtime_file": "assets/sfx/select_v03.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/select_v03.wav",
-      "source_candidate": 4,
-      "source_sha256": "c3c90c21abdab0331b2bcf4c489a11f8cc202213ff11f6bc1daa726c8f22c37c",
-      "variant": 3
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.29,
-      "final_sha256": "f8dec79c4c5e7790759bd58fe657d87cfd4bf4997ffa66ae81b0a43923e60888",
-      "game_asset": "assets/sfx/move_step.wav",
-      "runtime_file": "assets/sfx/move_step.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/move_step.wav",
-      "source_candidate": 7,
-      "source_sha256": "aeb339037d8a1e1e31a3dbc25764fca9698bcd4ea3808cd7ead6381f03ee111d",
-      "variant": 1
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.29,
-      "final_sha256": "ecc1762e65f22aa1d3e762ae225e698170148e27e5de55e7d550d3671fc00ddf",
-      "game_asset": "assets/sfx/move_step_v02.wav",
-      "runtime_file": "assets/sfx/move_step_v02.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/move_step_v02.wav",
-      "source_candidate": 1,
-      "source_sha256": "66115c02114319eacd4ec8210ba6304658f9fdcea1b15eac86d81cafbcc6e605",
-      "variant": 2
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.29,
-      "final_sha256": "d108c95bb5e52738002910900a09b09c50795090e23e1d00bd311cf425740c5f",
-      "game_asset": "assets/sfx/move_step_v03.wav",
-      "runtime_file": "assets/sfx/move_step_v03.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/move_step_v03.wav",
-      "source_candidate": 2,
-      "source_sha256": "683420295c4cb211bcf53b40852f8109cc9e3712f72b740b49949fbdcaab632e",
-      "variant": 3
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.29,
-      "final_sha256": "491b87064694237fd5f49967f4b4be75a69ef67dd9ace9fefdd0fd5e3f1e2c06",
-      "game_asset": "assets/sfx/move_step_v04.wav",
-      "runtime_file": "assets/sfx/move_step_v04.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/move_step_v04.wav",
-      "source_candidate": 6,
-      "source_sha256": "1ac354d228ac2d44f5d2a28f3cd8854681d7272067565ec91a5e92255125bde9",
-      "variant": 4
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.29,
-      "final_sha256": "97f8571caa9781f49cb70968add4e1c28dbf892635638f368d6ff03550b240be",
-      "game_asset": "assets/sfx/move_step_v05.wav",
-      "runtime_file": "assets/sfx/move_step_v05.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/move_step_v05.wav",
-      "source_candidate": 9,
-      "source_sha256": "279e99825c8be13ed845a284e4a24d790c33f21aceeb7e487c9667005d04d155",
-      "variant": 5
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.29,
-      "final_sha256": "88563b4ceb3f297ba46460ddf8587fe7002d9093787777201da31d4850fc3bc7",
-      "game_asset": "assets/sfx/move_step_v06.wav",
-      "runtime_file": "assets/sfx/move_step_v06.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/move_step_v06.wav",
-      "source_candidate": 12,
-      "source_sha256": "a40a0e5e3a8405a758f6b7bac3a669d8e81572585d9b1afa9413baf4d6bc2d6a",
-      "variant": 6
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.48,
-      "final_sha256": "5d7133373fd83bbc74feb653ce1236accb53b0d473032f6a687daa5ddde11de4",
-      "game_asset": "assets/sfx/capture_clank.wav",
-      "runtime_file": "assets/sfx/capture_clank.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/capture_clank.wav",
-      "source_candidate": 6,
-      "source_sha256": "07dae2e52a263d61659cb368c2dca774dee65db6faebe8e80b3919e05707230a",
-      "variant": 1
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.48,
-      "final_sha256": "613d520253d846720926e9af97e56492642b2cdbe861031fecaa0c6653f1f38a",
-      "game_asset": "assets/sfx/capture_clank_v02.wav",
-      "runtime_file": "assets/sfx/capture_clank_v02.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/capture_clank_v02.wav",
-      "source_candidate": 12,
-      "source_sha256": "3e4d125f928d83af03f745641a0c2d6491ab098a22583ca81f590631f09fe7f2",
-      "variant": 2
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.48,
-      "final_sha256": "cad631f88866179a07b68a25e34bcde151af76b0973b99afcf0bef449c5cc62c",
-      "game_asset": "assets/sfx/capture_clank_v03.wav",
-      "runtime_file": "assets/sfx/capture_clank_v03.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/capture_clank_v03.wav",
-      "source_candidate": 8,
-      "source_sha256": "f5153b53f0a19012d95ae471549686298e9bea21c063fbcb85bb83c2c1147209",
-      "variant": 3
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.48,
-      "final_sha256": "a29f4cdea901215b0a771434c287a401e8ed0929066f7844f45ce1120afc904f",
-      "game_asset": "assets/sfx/capture_clank_v04.wav",
-      "runtime_file": "assets/sfx/capture_clank_v04.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/capture_clank_v04.wav",
-      "source_candidate": 1,
-      "source_sha256": "ae3551c6a0e3a716ca98e4c808d65a6c6cc129596d9f4a0919884837c3788b13",
-      "variant": 4
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.48,
-      "final_sha256": "b7b6d5706493ab127dbd6e5381abcec95c69db100cde4b33daf6d015b29ec5d9",
-      "game_asset": "assets/sfx/capture_clank_v05.wav",
-      "runtime_file": "assets/sfx/capture_clank_v05.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/capture_clank_v05.wav",
-      "source_candidate": 2,
-      "source_sha256": "9437b84fea9db81109d3d607d3f55c374eb72eca06fb7002ce95a3a3e3dc48e6",
-      "variant": 5
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.76,
-      "final_sha256": "1110c26dbb53bd5b1e826f7e95aaa5e4728fc25a3c3eb2daaaf656a0515b3ac4",
-      "game_asset": "assets/sfx/fall_thud.wav",
-      "runtime_file": "assets/sfx/fall_thud.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/fall_thud.wav",
-      "source_candidate": 5,
-      "source_sha256": "93ab5d36f7c8e2861d19df5080b99ed7963ee553344a7477613bc5931bb0d43f",
-      "variant": 1
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.76,
-      "final_sha256": "278d7a7a03c15eaa0fc6ffab138b842c654211fffebf8ce51d78ca13ea3b2c5f",
-      "game_asset": "assets/sfx/fall_thud_v02.wav",
-      "runtime_file": "assets/sfx/fall_thud_v02.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/fall_thud_v02.wav",
-      "source_candidate": 6,
-      "source_sha256": "53bd4978008f71ba961ff4bad281e91bf58a72c86b3e032bb962b4277aa4631a",
-      "variant": 2
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.76,
-      "final_sha256": "0c6f6f1124a0b3794ffda78fc1b3a3a36e39bd6dafd1bca334ba8c46cc163b2b",
-      "game_asset": "assets/sfx/fall_thud_v03.wav",
-      "runtime_file": "assets/sfx/fall_thud_v03.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/fall_thud_v03.wav",
-      "source_candidate": 1,
-      "source_sha256": "d9d3b247d29c2c69b462dd30272ae72f6f90e22380602e0ebfd7d4ab3a6b7592",
-      "variant": 3
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.76,
-      "final_sha256": "05e8b6d4b546ff6b7338a2b019d284552c387baac6d83becfbfd8dd119bcbd5f",
-      "game_asset": "assets/sfx/fall_thud_v04.wav",
-      "runtime_file": "assets/sfx/fall_thud_v04.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/fall_thud_v04.wav",
-      "source_candidate": 2,
-      "source_sha256": "e4aad03c80d99110d475a528b6ef7752f8ce504e16591e3caea14ab5898ce1b8",
-      "variant": 4
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 1.2,
-      "final_sha256": "5614ac42f527852f370ccf3b4b3b235313c002570d0d97ac1b9d9e8a16972028",
-      "game_asset": "assets/sfx/start_trumpet.wav",
-      "runtime_file": "assets/sfx/start_trumpet.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/start_trumpet.wav",
-      "source_candidate": 5,
-      "source_sha256": "0013aa43352fab1dacf4d436004ada332f89888476261382b0f5592a7e6a1ac5",
-      "variant": 1
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 1.2,
-      "final_sha256": "644b6e3d28abad36cc92b220c835e2fa57e3ec309eb80a15e775d9c491a5f450",
-      "game_asset": "assets/sfx/start_trumpet_v02.wav",
-      "runtime_file": "assets/sfx/start_trumpet_v02.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/start_trumpet_v02.wav",
-      "source_candidate": 1,
-      "source_sha256": "c366319ce58483dcaa5a5ce4b43802799f7faa23e3e0dbabe6b1cd904fe825bf",
-      "variant": 2
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 2.3,
-      "final_sha256": "5fcd349d4902e8a85df22e9bded38d711ffbd87295ea7b376f4d9a3791f28731",
-      "game_asset": "assets/sfx/win_trumpet.wav",
-      "runtime_file": "assets/sfx/win_trumpet.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/win_trumpet.wav",
-      "source_candidate": 5,
-      "source_sha256": "80ba106fb5a6290f530a85eeb837d9f1635c01b7389692ad43fd1d2c8e798a3c",
-      "variant": 1
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 2.3,
-      "final_sha256": "89aa568efa1f34552c2911595ab1915c548859f2499c9287d627787cc1188db1",
-      "game_asset": "assets/sfx/win_trumpet_v02.wav",
-      "runtime_file": "assets/sfx/win_trumpet_v02.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/win_trumpet_v02.wav",
-      "source_candidate": 6,
-      "source_sha256": "ee476d0d2f5b0ec5977265dbbd7826740bbf309cf010ea8b16884f8995b539d1",
-      "variant": 2
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.44,
-      "final_sha256": "7e98d82bee2ecff5edac346ce66d309f7c0ec88c0ebdd3ba6f0b693e11bd4096",
-      "game_asset": "assets/sfx/check.wav",
-      "runtime_file": "assets/sfx/check.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/check.wav",
-      "source_candidate": 1,
-      "source_sha256": "3588cd6eb66364cd26eef9beccc8c4a546369966ec21ad675d9b80644310ce65",
-      "variant": 1
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.44,
-      "final_sha256": "dd6a5cbdf6d56fe62a55b9d138917beb3580e2328414433b35e4bbecfe764fa0",
-      "game_asset": "assets/sfx/check_v02.wav",
-      "runtime_file": "assets/sfx/check_v02.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/check_v02.wav",
-      "source_candidate": 6,
-      "source_sha256": "5326f937c2d8e8e2bfc2f2f488a166a51e498a7367201a97123bd97e183c3010",
-      "variant": 2
-    },
-    {
-      "channels": 1,
-      "duration_seconds": 0.44,
-      "final_sha256": "29b36a9576f6348926ec51b34248bf219d0ef6c48d032e5d5e27e45be85171d5",
-      "game_asset": "assets/sfx/check_v03.wav",
-      "runtime_file": "assets/sfx/check_v03.wav",
-      "sample_rate": 44100,
-      "sfxforge_dist": "dist/chess-bash/assets/sfx/check_v03.wav",
-      "source_candidate": 2,
-      "source_sha256": "860b923944c55efdbdf29e6c7138869593c8b9505a63032f88d053332fb3b8eb",
-      "variant": 3
-    }
-  ],
-  "provider": "ElevenLabs",
-  "schema": 1,
-  "selection": {
-    "clap": {
-      "available": true,
-      "model": "laion/clap-htsat-fused",
-      "model_revision": "365dea6ef167def6676140ed93bbc43f84dabb28",
-      "purpose": "candidate triage only; not a substitute for listening",
-      "repeat_result": "benchmarks/clap/chess-bash-elevenlabs-b.json",
-      "repeat_sha256": "558b160ea0a389d4f36fdc0907ad8454086bf529294c875c80a331f1ae795633",
-      "reproducibility": "normalized candidate score arrays identical across two independent runs",
-      "result": "benchmarks/clap/chess-bash-elevenlabs.json",
-      "sha256": "d1d52fd4e8d1cf9dbc0c552e945cc05268b32f068b072baad2951bd18cce8152"
-    },
-    "pilot_policy": "retain the six user-auditioned move/capture/fall pilot candidates",
-    "semantic_weight": 0.68,
-    "signal_shape_weight": 0.32,
-    "waveform_diversity_penalty": 0.24
+  {
+   "package": "ui_game_state_generator",
+   "cues": [
+    "select",
+    "check"
+   ]
   },
-  "sfx_sublicensing_opt_out": "not observable through the API; managed with the Disable control on the ElevenLabs Sound Effects product page",
-  "standalone_distribution": "intended only as bundled Chess Bash game assets, not a standalone SFX library",
-  "terms_snapshot": {
-    "checked_at": "2026-07-14",
-    "commercial_use": "https://help.elevenlabs.io/hc/en-us/articles/13313564601361-Can-I-publish-the-content-I-generate-on-the-platform",
-    "prohibited_use": "https://elevenlabs.io/use-policy",
-    "sound_effects_terms": "https://elevenlabs.io/sound-effects-terms",
-    "terms_of_service": "https://elevenlabs.io/terms-of-use"
-  },
-  "music": {
-    "note": "The three music tracks are locally generated by music_sound_generator, which drives Strudel (AGPL-3.0) headlessly and captures pure-synth patterns. The AUDIO is the output of running the tool, not Strudel source, and the patterns use only synthesised waveforms so no sample-bank licence applies. Output is NOT byte-deterministic (real-time capture); final_sha256 is as-rendered and the reproducible pin is pattern + pattern_sha256. Previous music archived under ~/research/gpu_terminal/sound/older_assets/chess-bash/music_originals_2026-07-16/. The 25 SFX cues above are unrelated (ElevenLabs).",
-    "tracks": [
-      {
-        "runtime_file": "assets/music/thinking_loop.wav",
-        "cue": "thinking_loop",
-        "origin": "locally_generated",
-        "generator": "music_sound_generator",
-        "tool": "Strudel (https://strudel.cc), AGPL-3.0 \u2014 invoked as an external renderer",
-        "synthesis": "pure synthesised waveforms (sine/sawtooth/triangle/square + noise); NO sample banks, so no sample licence applies",
-        "seed": 20260716,
-        "cps": 0.28,
-        "cycles": 6,
-        "duration_seconds": 21.42,
-        "loop": true,
-        "integer_cycles": true,
-        "final_sha256": "391a307ca7a76a6e38bcca47a1f57e699d162ac19621f0606dc8cda9f7f48820",
-        "pattern_sha256": "dd7c6f405dbfe4d436591c1e19f800ea3a607feef8da2d367645e69b5750f241",
-        "pattern": {
-          "id": "thinking_loop",
-          "sha256": "64a110f8488df75f354f9d318ac632907890b7d4998225f8c290755bc7085d8e",
-          "source": "chess_bash_record.html (accepted 2026-07-07 by ear for chess-bash)",
-          "synthesis": "synthesised only: s(\"sine\"/\"sawtooth\"/\"triangle\"/\"square\") + noise (\"white\"/\"pink\"/\"brown\"); no sample banks"
-        },
-        "auditioned": "2026-07-16 by ear \u2014 accepted"
-      },
-      {
-        "runtime_file": "assets/music/battle_loop.wav",
-        "cue": "battle_loop",
-        "origin": "locally_generated",
-        "generator": "music_sound_generator",
-        "tool": "Strudel (https://strudel.cc), AGPL-3.0 \u2014 invoked as an external renderer",
-        "synthesis": "pure synthesised waveforms (sine/sawtooth/triangle/square + noise); NO sample banks, so no sample licence applies",
-        "seed": 20260716,
-        "cps": 0.5,
-        "cycles": 12,
-        "duration_seconds": 24.0,
-        "loop": true,
-        "integer_cycles": true,
-        "final_sha256": "74d05c01a035530e5396503b562ad3b03164984c9251cda9da361cfce47be415",
-        "pattern_sha256": "e0f73fecf774bb66dff532cdca701605d22f2ae0874c07039f8045014ac9ced5",
-        "pattern": {
-          "id": "battle_loop",
-          "sha256": "addceafeb1d4152d072cde6e2001cf285029933b76189bf565ec361f67230533",
-          "source": "chess_bash_record.html (accepted 2026-07-07 by ear for chess-bash)",
-          "synthesis": "synthesised only: s(\"sine\"/\"sawtooth\"/\"triangle\"/\"square\") + noise (\"white\"/\"pink\"/\"brown\"); no sample banks"
-        },
-        "auditioned": "2026-07-16 by ear \u2014 accepted"
-      },
-      {
-        "runtime_file": "assets/music/victory_fanfare.wav",
-        "cue": "victory_fanfare",
-        "origin": "locally_generated",
-        "generator": "music_sound_generator",
-        "tool": "Strudel (https://strudel.cc), AGPL-3.0 \u2014 invoked as an external renderer",
-        "synthesis": "pure synthesised waveforms (sine/sawtooth/triangle/square + noise); NO sample banks, so no sample licence applies",
-        "seed": 20260716,
-        "cps": 0.72,
-        "cycles": null,
-        "duration_seconds": 6.96,
-        "loop": false,
-        "integer_cycles": null,
-        "final_sha256": "8e2fff97256425a14ee0e9cc3725efc20474d9129a17bc0ca39f9d3d59c923b2",
-        "pattern_sha256": "26142698dab84e82413d1516600c3d10e7836bca5bbd863cf4cd725111b68077",
-        "pattern": {
-          "id": "victory_fanfare",
-          "sha256": "4d9abbf1a0b062adc4dd7f103dc85e45a79d152ea790a87aedea80178afa45b4",
-          "source": "chess_bash_record.html (accepted 2026-07-07 by ear for chess-bash)",
-          "synthesis": "synthesised only: s(\"sine\"/\"sawtooth\"/\"triangle\"/\"square\") + noise (\"white\"/\"pink\"/\"brown\"); no sample banks"
-        },
-        "auditioned": "2026-07-16 by ear \u2014 accepted"
-      }
-    ]
+  {
+   "package": "music_sound_generator",
+   "cues": [
+    "start_trumpet",
+    "win_trumpet"
+   ],
+   "note": "also the three assets/music tracks"
   }
+ ],
+ "cues": [
+  {
+   "id": "select",
+   "generator_package": "ui_game_state_generator",
+   "generator_cue": "menu_accept",
+   "options": {
+    "style": "acoustic"
+   },
+   "command": "python -m ui_game_state_generator render menu_accept --style acoustic --count 3 --seed 20260716",
+   "requested_variants": 3,
+   "source_recordings": [
+    {
+     "license": "CC0 1.0",
+     "note": "pure procedural DSP synthesis; no source recordings; CC0 by construction"
+    }
+   ],
+   "artifacts": [
+    {
+     "runtime_file": "assets/sfx/select.wav",
+     "variant": 1,
+     "renderer": "procedural",
+     "final_sha256": "8ef31cb2ae3717f1a1d24234869f7efb67c4edc34007902c220d368f07b92b1a",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.195,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/select_v02.wav",
+     "variant": 2,
+     "renderer": "procedural",
+     "final_sha256": "eee1095d459a744822972f604296fdf40fbac80cb18b795a3e903c349d131f89",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.201,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/select_v03.wav",
+     "variant": 3,
+     "renderer": "procedural",
+     "final_sha256": "1e3e0c3c465c0f70be646231e3ac9b1be5a8862afa5317683d4432cf9486902f",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.2,
+     "seed": 20260716
+    }
+   ]
+  },
+  {
+   "id": "move_step",
+   "generator_package": "combat_generators",
+   "generator_cue": "footstep",
+   "options": {
+    "pack": "chess-bash"
+   },
+   "command": "python combat_generators/combat_sfx.py pack chess-bash --seed 20260716",
+   "requested_variants": 6,
+   "source_recordings": [
+    {
+     "license": "CC0 1.0",
+     "note": "pure procedural DSP synthesis; no source recordings; CC0 by construction"
+    }
+   ],
+   "artifacts": [
+    {
+     "runtime_file": "assets/sfx/move_step.wav",
+     "variant": 1,
+     "renderer": "procedural",
+     "final_sha256": "3a4398600fd04a6300ff5094bb2df5cace79f3a3a54e748fbb9708e96de8658a",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.26,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/move_step_v02.wav",
+     "variant": 2,
+     "renderer": "procedural",
+     "final_sha256": "71946bce6922647077161d33cc8cd105b5d6ba11295a41f868c622f42fb5a9c4",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.26,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/move_step_v03.wav",
+     "variant": 3,
+     "renderer": "procedural",
+     "final_sha256": "185c6fd86ca70b1f22c12af04562da87f1c1dabe2f70addd67a6747a69b06710",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.26,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/move_step_v04.wav",
+     "variant": 4,
+     "renderer": "procedural",
+     "final_sha256": "fae63e50213fb222a17fb41e91a23e33c0dd06e52027775e621e1c4091090072",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.26,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/move_step_v05.wav",
+     "variant": 5,
+     "renderer": "procedural",
+     "final_sha256": "018f6db64c9768b5955d9705ff077a52363bd58a7cc051fb82aeccbee06656cc",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.26,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/move_step_v06.wav",
+     "variant": 6,
+     "renderer": "procedural",
+     "final_sha256": "aefd27cc51b6a9d42d83eb947955775a307f99bae8b4a597823a28bf24715a0b",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.26,
+     "seed": 20260716
+    }
+   ]
+  },
+  {
+   "id": "capture_clank",
+   "generator_package": "combat_generators",
+   "generator_cue": "strike",
+   "options": {
+    "pack": "chess-bash",
+    "weapon": "sword",
+    "target": "blade"
+   },
+   "command": "python combat_generators/combat_sfx.py pack chess-bash --seed 20260716",
+   "requested_variants": 5,
+   "source_recordings": [
+    {
+     "license": "CC0 1.0",
+     "note": "pure procedural DSP synthesis; no source recordings; CC0 by construction"
+    }
+   ],
+   "artifacts": [
+    {
+     "runtime_file": "assets/sfx/capture_clank.wav",
+     "variant": 1,
+     "renderer": "procedural",
+     "final_sha256": "fabe966d6849d295b85164c8e62ab6508f9ccf3e625640f89684be7382c9e788",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.44,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/capture_clank_v02.wav",
+     "variant": 2,
+     "renderer": "procedural",
+     "final_sha256": "236d4e720bdd4d71e3141b9d37d4ce6a6d8f3b8a0229f6ad9e04eee9e8d367dc",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.44,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/capture_clank_v03.wav",
+     "variant": 3,
+     "renderer": "procedural",
+     "final_sha256": "2ab601800d85d5665d6d98d5227278c918e0639b65967fa863b7fef69d80b9ef",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.44,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/capture_clank_v04.wav",
+     "variant": 4,
+     "renderer": "procedural",
+     "final_sha256": "74f6f00fb482a855a30a84451be7882981c0582bd35e92ae933eb3ad7307762c",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.44,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/capture_clank_v05.wav",
+     "variant": 5,
+     "renderer": "procedural",
+     "final_sha256": "f0ffadcbd7104b56bd7841d643b96c09e542c15f36ec0e70574f13312d633d00",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.44,
+     "seed": 20260716
+    }
+   ]
+  },
+  {
+   "id": "fall_thud",
+   "generator_package": "combat_generators",
+   "generator_cue": "body_fall",
+   "options": {
+    "pack": "chess-bash"
+   },
+   "command": "python combat_generators/combat_sfx.py pack chess-bash --seed 20260716",
+   "requested_variants": 4,
+   "source_recordings": [
+    {
+     "license": "CC0 1.0",
+     "note": "pure procedural DSP synthesis; no source recordings; CC0 by construction"
+    }
+   ],
+   "artifacts": [
+    {
+     "runtime_file": "assets/sfx/fall_thud.wav",
+     "variant": 1,
+     "renderer": "procedural",
+     "final_sha256": "e3304a96f7f189a916695e62092c88b92497211544fb8293397fdc92bbe14c6b",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.85,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/fall_thud_v02.wav",
+     "variant": 2,
+     "renderer": "procedural",
+     "final_sha256": "78d1fc9364775aa5b12b9aeae9c76c21c5d7e36fd176ae7c668f4c01fc2fbb40",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.85,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/fall_thud_v03.wav",
+     "variant": 3,
+     "renderer": "procedural",
+     "final_sha256": "6385148ffe45439fd9edeb3a01ff664f48041ee51818c046a54e866d8e382351",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.85,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/fall_thud_v04.wav",
+     "variant": 4,
+     "renderer": "procedural",
+     "final_sha256": "667fa6c7f4c275af353b85db346fda0dc70200ce4872d6861af0c75a16ae4d12",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.85,
+     "seed": 20260716
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "generator_package": "ui_game_state_generator",
+   "generator_cue": "warning",
+   "options": {
+    "style": "acoustic"
+   },
+   "command": "python -m ui_game_state_generator render warning --style acoustic --count 3 --seed 20260716",
+   "requested_variants": 3,
+   "source_recordings": [
+    {
+     "license": "CC0 1.0",
+     "note": "pure procedural DSP synthesis; no source recordings; CC0 by construction"
+    }
+   ],
+   "artifacts": [
+    {
+     "runtime_file": "assets/sfx/check.wav",
+     "variant": 1,
+     "renderer": "procedural",
+     "final_sha256": "e64d4bd8d652250a7c1307b181213004824f48d7f6eb1e01f1256330297fbda5",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.557,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/check_v02.wav",
+     "variant": 2,
+     "renderer": "procedural",
+     "final_sha256": "0262ac30081a72f3f9b7c20460013b701122c24b0f00f68f7cf03b1305979e17",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.557,
+     "seed": 20260716
+    },
+    {
+     "runtime_file": "assets/sfx/check_v03.wav",
+     "variant": 3,
+     "renderer": "procedural",
+     "final_sha256": "f3a909b2080010b3848d6f8b35cf5d8e66a0f5b24d57c12b4f7b27608a0250e5",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 0.557,
+     "seed": 20260716
+    }
+   ]
+  },
+  {
+   "id": "start_trumpet",
+   "generator_package": "music_sound_generator",
+   "generator_cue": "start_fanfare",
+   "options": {},
+   "command": "python -m music_sound_generator render start_fanfare --count 2",
+   "requested_variants": 2,
+   "pattern_sha256": "cee54a6c70596bc7a74abf98c6c9ef40ae1faffc16e9ec5a0514f9f880292aaa",
+   "source_recordings": [
+    {
+     "license": "CC0 1.0",
+     "note": "Strudel pure-synth pattern 'start_fanfare' (synthesised waveforms only, no sample banks); reproducibility pinned by pattern_sha256, not final bytes (real-time capture)"
+    }
+   ],
+   "artifacts": [
+    {
+     "runtime_file": "assets/sfx/start_trumpet.wav",
+     "variant": 1,
+     "renderer": "strudel-capture",
+     "final_sha256": "b16c3efa6d05de943b3ce762f22c43349ff798b18ac89dd9e7c71cdd30eab4c5",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 2.58,
+     "seed": null,
+     "note": "real-time capture, not byte-deterministic; pinned by pattern_sha256"
+    },
+    {
+     "runtime_file": "assets/sfx/start_trumpet_v02.wav",
+     "variant": 2,
+     "renderer": "strudel-capture",
+     "final_sha256": "208384505f9521daff215405b27e0cf669def945cfd79d7d0342cfb08045bd35",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 2.58,
+     "seed": null,
+     "note": "real-time capture, not byte-deterministic; pinned by pattern_sha256"
+    }
+   ]
+  },
+  {
+   "id": "win_trumpet",
+   "generator_package": "music_sound_generator",
+   "generator_cue": "win_fanfare",
+   "options": {},
+   "command": "python -m music_sound_generator render win_fanfare --count 2",
+   "requested_variants": 2,
+   "pattern_sha256": "ddbea5a43e605383c48f463d0238001152833d93dc4d74a6fc78be101bd06c63",
+   "source_recordings": [
+    {
+     "license": "CC0 1.0",
+     "note": "Strudel pure-synth pattern 'win_fanfare' (synthesised waveforms only, no sample banks); reproducibility pinned by pattern_sha256, not final bytes (real-time capture)"
+    }
+   ],
+   "artifacts": [
+    {
+     "runtime_file": "assets/sfx/win_trumpet.wav",
+     "variant": 1,
+     "renderer": "strudel-capture",
+     "final_sha256": "ccc94f97d518dbc72362b65b805e16b33a3774302e269153f602ab7941b6f534",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 2.7,
+     "seed": null,
+     "note": "real-time capture, not byte-deterministic; pinned by pattern_sha256"
+    },
+    {
+     "runtime_file": "assets/sfx/win_trumpet_v02.wav",
+     "variant": 2,
+     "renderer": "strudel-capture",
+     "final_sha256": "19d3611c06b8dcad4545287b9a727972958b8fc27978a63725bdcbaf9f3e1537",
+     "channels": 1,
+     "sample_rate": 44100,
+     "duration_seconds": 2.64,
+     "seed": null,
+     "note": "real-time capture, not byte-deterministic; pinned by pattern_sha256"
+    }
+   ]
+  }
+ ],
+ "promoted_artifacts": [
+  {
+   "runtime_file": "assets/sfx/select.wav",
+   "variant": 1,
+   "renderer": "procedural",
+   "final_sha256": "8ef31cb2ae3717f1a1d24234869f7efb67c4edc34007902c220d368f07b92b1a",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.195,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/select.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/select_v02.wav",
+   "variant": 2,
+   "renderer": "procedural",
+   "final_sha256": "eee1095d459a744822972f604296fdf40fbac80cb18b795a3e903c349d131f89",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.201,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/select_v02.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/select_v03.wav",
+   "variant": 3,
+   "renderer": "procedural",
+   "final_sha256": "1e3e0c3c465c0f70be646231e3ac9b1be5a8862afa5317683d4432cf9486902f",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.2,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/select_v03.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/move_step.wav",
+   "variant": 1,
+   "renderer": "procedural",
+   "final_sha256": "3a4398600fd04a6300ff5094bb2df5cace79f3a3a54e748fbb9708e96de8658a",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.26,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/move_step.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/move_step_v02.wav",
+   "variant": 2,
+   "renderer": "procedural",
+   "final_sha256": "71946bce6922647077161d33cc8cd105b5d6ba11295a41f868c622f42fb5a9c4",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.26,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/move_step_v02.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/move_step_v03.wav",
+   "variant": 3,
+   "renderer": "procedural",
+   "final_sha256": "185c6fd86ca70b1f22c12af04562da87f1c1dabe2f70addd67a6747a69b06710",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.26,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/move_step_v03.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/move_step_v04.wav",
+   "variant": 4,
+   "renderer": "procedural",
+   "final_sha256": "fae63e50213fb222a17fb41e91a23e33c0dd06e52027775e621e1c4091090072",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.26,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/move_step_v04.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/move_step_v05.wav",
+   "variant": 5,
+   "renderer": "procedural",
+   "final_sha256": "018f6db64c9768b5955d9705ff077a52363bd58a7cc051fb82aeccbee06656cc",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.26,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/move_step_v05.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/move_step_v06.wav",
+   "variant": 6,
+   "renderer": "procedural",
+   "final_sha256": "aefd27cc51b6a9d42d83eb947955775a307f99bae8b4a597823a28bf24715a0b",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.26,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/move_step_v06.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/capture_clank.wav",
+   "variant": 1,
+   "renderer": "procedural",
+   "final_sha256": "fabe966d6849d295b85164c8e62ab6508f9ccf3e625640f89684be7382c9e788",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.44,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/capture_clank.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/capture_clank_v02.wav",
+   "variant": 2,
+   "renderer": "procedural",
+   "final_sha256": "236d4e720bdd4d71e3141b9d37d4ce6a6d8f3b8a0229f6ad9e04eee9e8d367dc",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.44,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/capture_clank_v02.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/capture_clank_v03.wav",
+   "variant": 3,
+   "renderer": "procedural",
+   "final_sha256": "2ab601800d85d5665d6d98d5227278c918e0639b65967fa863b7fef69d80b9ef",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.44,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/capture_clank_v03.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/capture_clank_v04.wav",
+   "variant": 4,
+   "renderer": "procedural",
+   "final_sha256": "74f6f00fb482a855a30a84451be7882981c0582bd35e92ae933eb3ad7307762c",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.44,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/capture_clank_v04.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/capture_clank_v05.wav",
+   "variant": 5,
+   "renderer": "procedural",
+   "final_sha256": "f0ffadcbd7104b56bd7841d643b96c09e542c15f36ec0e70574f13312d633d00",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.44,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/capture_clank_v05.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/fall_thud.wav",
+   "variant": 1,
+   "renderer": "procedural",
+   "final_sha256": "e3304a96f7f189a916695e62092c88b92497211544fb8293397fdc92bbe14c6b",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.85,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/fall_thud.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/fall_thud_v02.wav",
+   "variant": 2,
+   "renderer": "procedural",
+   "final_sha256": "78d1fc9364775aa5b12b9aeae9c76c21c5d7e36fd176ae7c668f4c01fc2fbb40",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.85,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/fall_thud_v02.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/fall_thud_v03.wav",
+   "variant": 3,
+   "renderer": "procedural",
+   "final_sha256": "6385148ffe45439fd9edeb3a01ff664f48041ee51818c046a54e866d8e382351",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.85,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/fall_thud_v03.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/fall_thud_v04.wav",
+   "variant": 4,
+   "renderer": "procedural",
+   "final_sha256": "667fa6c7f4c275af353b85db346fda0dc70200ce4872d6861af0c75a16ae4d12",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.85,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/fall_thud_v04.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/check.wav",
+   "variant": 1,
+   "renderer": "procedural",
+   "final_sha256": "e64d4bd8d652250a7c1307b181213004824f48d7f6eb1e01f1256330297fbda5",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.557,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/check.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/check_v02.wav",
+   "variant": 2,
+   "renderer": "procedural",
+   "final_sha256": "0262ac30081a72f3f9b7c20460013b701122c24b0f00f68f7cf03b1305979e17",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.557,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/check_v02.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/check_v03.wav",
+   "variant": 3,
+   "renderer": "procedural",
+   "final_sha256": "f3a909b2080010b3848d6f8b35cf5d8e66a0f5b24d57c12b4f7b27608a0250e5",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 0.557,
+   "seed": 20260716,
+   "game_asset": "assets/sfx/check_v03.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/start_trumpet.wav",
+   "variant": 1,
+   "renderer": "strudel-capture",
+   "final_sha256": "b16c3efa6d05de943b3ce762f22c43349ff798b18ac89dd9e7c71cdd30eab4c5",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 2.58,
+   "seed": null,
+   "note": "real-time capture, not byte-deterministic; pinned by pattern_sha256",
+   "game_asset": "assets/sfx/start_trumpet.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/start_trumpet_v02.wav",
+   "variant": 2,
+   "renderer": "strudel-capture",
+   "final_sha256": "208384505f9521daff215405b27e0cf669def945cfd79d7d0342cfb08045bd35",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 2.58,
+   "seed": null,
+   "note": "real-time capture, not byte-deterministic; pinned by pattern_sha256",
+   "game_asset": "assets/sfx/start_trumpet_v02.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/win_trumpet.wav",
+   "variant": 1,
+   "renderer": "strudel-capture",
+   "final_sha256": "ccc94f97d518dbc72362b65b805e16b33a3774302e269153f602ab7941b6f534",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 2.7,
+   "seed": null,
+   "note": "real-time capture, not byte-deterministic; pinned by pattern_sha256",
+   "game_asset": "assets/sfx/win_trumpet.wav"
+  },
+  {
+   "runtime_file": "assets/sfx/win_trumpet_v02.wav",
+   "variant": 2,
+   "renderer": "strudel-capture",
+   "final_sha256": "19d3611c06b8dcad4545287b9a727972958b8fc27978a63725bdcbaf9f3e1537",
+   "channels": 1,
+   "sample_rate": 44100,
+   "duration_seconds": 2.64,
+   "seed": null,
+   "note": "real-time capture, not byte-deterministic; pinned by pattern_sha256",
+   "game_asset": "assets/sfx/win_trumpet_v02.wav"
+  }
+ ],
+ "music": {
+  "note": "The three music tracks are locally generated by music_sound_generator, which drives Strudel (AGPL-3.0) headlessly and captures pure-synth patterns. The AUDIO is the output of running the tool, not Strudel source, and the patterns use only synthesised waveforms so no sample-bank licence applies. Output is NOT byte-deterministic (real-time capture); final_sha256 is as-rendered and the reproducible pin is pattern + pattern_sha256. Previous music archived in a local store outside the repository. The 25 SFX cues are separate and, as of 2026-07-16, are also locally generated and CC0-derived (see the cues array).",
+  "tracks": [
+   {
+    "runtime_file": "assets/music/thinking_loop.wav",
+    "cue": "thinking_loop",
+    "origin": "locally_generated",
+    "generator": "music_sound_generator",
+    "tool": "Strudel (https://strudel.cc), AGPL-3.0 \u2014 invoked as an external renderer",
+    "synthesis": "pure synthesised waveforms (sine/sawtooth/triangle/square + noise); NO sample banks, so no sample licence applies",
+    "seed": 20260716,
+    "cps": 0.28,
+    "cycles": 6,
+    "duration_seconds": 21.42,
+    "loop": true,
+    "integer_cycles": true,
+    "final_sha256": "391a307ca7a76a6e38bcca47a1f57e699d162ac19621f0606dc8cda9f7f48820",
+    "pattern_sha256": "dd7c6f405dbfe4d436591c1e19f800ea3a607feef8da2d367645e69b5750f241",
+    "pattern": {
+     "id": "thinking_loop",
+     "sha256": "64a110f8488df75f354f9d318ac632907890b7d4998225f8c290755bc7085d8e",
+     "source": "chess_bash_record.html (accepted 2026-07-07 by ear for chess-bash)",
+     "synthesis": "synthesised only: s(\"sine\"/\"sawtooth\"/\"triangle\"/\"square\") + noise (\"white\"/\"pink\"/\"brown\"); no sample banks"
+    },
+    "auditioned": "2026-07-16 by ear \u2014 accepted"
+   },
+   {
+    "runtime_file": "assets/music/battle_loop.wav",
+    "cue": "battle_loop",
+    "origin": "locally_generated",
+    "generator": "music_sound_generator",
+    "tool": "Strudel (https://strudel.cc), AGPL-3.0 \u2014 invoked as an external renderer",
+    "synthesis": "pure synthesised waveforms (sine/sawtooth/triangle/square + noise); NO sample banks, so no sample licence applies",
+    "seed": 20260716,
+    "cps": 0.5,
+    "cycles": 12,
+    "duration_seconds": 24.0,
+    "loop": true,
+    "integer_cycles": true,
+    "final_sha256": "74d05c01a035530e5396503b562ad3b03164984c9251cda9da361cfce47be415",
+    "pattern_sha256": "e0f73fecf774bb66dff532cdca701605d22f2ae0874c07039f8045014ac9ced5",
+    "pattern": {
+     "id": "battle_loop",
+     "sha256": "addceafeb1d4152d072cde6e2001cf285029933b76189bf565ec361f67230533",
+     "source": "chess_bash_record.html (accepted 2026-07-07 by ear for chess-bash)",
+     "synthesis": "synthesised only: s(\"sine\"/\"sawtooth\"/\"triangle\"/\"square\") + noise (\"white\"/\"pink\"/\"brown\"); no sample banks"
+    },
+    "auditioned": "2026-07-16 by ear \u2014 accepted"
+   },
+   {
+    "runtime_file": "assets/music/victory_fanfare.wav",
+    "cue": "victory_fanfare",
+    "origin": "locally_generated",
+    "generator": "music_sound_generator",
+    "tool": "Strudel (https://strudel.cc), AGPL-3.0 \u2014 invoked as an external renderer",
+    "synthesis": "pure synthesised waveforms (sine/sawtooth/triangle/square + noise); NO sample banks, so no sample licence applies",
+    "seed": 20260716,
+    "cps": 0.72,
+    "cycles": null,
+    "duration_seconds": 6.96,
+    "loop": false,
+    "integer_cycles": null,
+    "final_sha256": "8e2fff97256425a14ee0e9cc3725efc20474d9129a17bc0ca39f9d3d59c923b2",
+    "pattern_sha256": "26142698dab84e82413d1516600c3d10e7836bca5bbd863cf4cd725111b68077",
+    "pattern": {
+     "id": "victory_fanfare",
+     "sha256": "4d9abbf1a0b062adc4dd7f103dc85e45a79d152ea790a87aedea80178afa45b4",
+     "source": "chess_bash_record.html (accepted 2026-07-07 by ear for chess-bash)",
+     "synthesis": "synthesised only: s(\"sine\"/\"sawtooth\"/\"triangle\"/\"square\") + noise (\"white\"/\"pink\"/\"brown\"); no sample banks"
+    },
+    "auditioned": "2026-07-16 by ear \u2014 accepted"
+   }
+  ]
+ },
+ "supersedes": "ElevenLabs Text-to-Sound-Effects v2 SFX bank (removed 2026-07-16); prior blobs remain in git history. The three music tracks were already locally generated."
 }

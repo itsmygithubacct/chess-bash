@@ -135,10 +135,10 @@ isometric sprite renderer remains game-specific.
 ## Assets and license
 
 Chess Bash code, project-specific art, and deterministic music are released
-under the [MIT License](LICENSE) to the extent applicable. The bundled
-ElevenLabs-generated gameplay SFX have a separate asset exception and may not
-be extracted, relicensed, or distributed as standalone sounds. The embedded
-terminal font retains its permissive upstream notice. See the public [asset
-provenance and licensing manifest](docs/asset-sources.md) for details.
+under the [MIT License](LICENSE) to the extent applicable. The bundled gameplay
+SFX in `assets/sfx/` are locally generated and CC0-derived, with no
+standalone-use restriction. The embedded terminal font retains its permissive
+upstream notice. See the public [asset provenance and licensing
+manifest](docs/asset-sources.md) for details.
 
 See [CHANGELOG.md](CHANGELOG.md) for release notes.
