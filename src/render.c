@@ -1,11 +1,12 @@
 #include "chess_bash.h"
-#include "font8x16.h"
+#include "soft_raster.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 static uint8_t *fb;
+static sr_canvas canvas;
 static int W, H;
 static Bitmap title_img, board_bg_img, piece_atlas, piece_direction_atlas;
 static Bitmap fight_atlas, effect_atlas;
@@ -13,7 +14,12 @@ static int loaded_theme = -1;
 static float board_cx, board_top, tile_w, tile_h;
 static float shake_x, shake_y;   /* whole-scene impact shake, set per frame */
 
-uint8_t *render_fb(void) { return fb; }
+uint8_t *render_fb(void)
+{
+    if (fb != NULL)
+        (void)sr_pack_rgba(&canvas, fb, (size_t)W * (size_t)H * 4u);
+    return fb;
+}
 
 /* ---------- board themes ---------- */
 
@@ -35,110 +41,46 @@ const char *board_theme_name(int i)
 
 static uint32_t rgb_mix(uint32_t a, uint32_t b, float t)
 {
-    t = clampf(t, 0, 1);
-    int ar = (a >> 16) & 255, ag = (a >> 8) & 255, ab = a & 255;
-    int br = (b >> 16) & 255, bg = (b >> 8) & 255, bb = b & 255;
-    int r = ar + (int)((br - ar) * t);
-    int g = ag + (int)((bg - ag) * t);
-    int bl = ab + (int)((bb - ab) * t);
-    return ((uint32_t)r << 16) | ((uint32_t)g << 8) | (uint32_t)bl;
+    return sr_mix(a, b, t);
 }
 
 static void px_set(int x, int y, uint32_t rgb)
 {
-    if (x < 0 || x >= W || y < 0 || y >= H) return;
-    uint8_t *p = fb + ((size_t)y * W + x) * 4;
-    p[0] = (rgb >> 16) & 255;
-    p[1] = (rgb >> 8) & 255;
-    p[2] = rgb & 255;
-    p[3] = 255;
+    sr_px(&canvas, x, y, rgb);
 }
 
 static void px_blend(int x, int y, uint32_t rgb, float a)
 {
-    if (x < 0 || x >= W || y < 0 || y >= H) return;
-    int ai = (int)(clampf(a, 0, 1) * 256.0f + 0.5f);
-    if (ai <= 0) return;
-    uint8_t *p = fb + ((size_t)y * W + x) * 4;
-    int r = (rgb >> 16) & 255, g = (rgb >> 8) & 255, b = rgb & 255;
-    p[0] = (uint8_t)(p[0] + (((r - p[0]) * ai) >> 8));
-    p[1] = (uint8_t)(p[1] + (((g - p[1]) * ai) >> 8));
-    p[2] = (uint8_t)(p[2] + (((b - p[2]) * ai) >> 8));
+    sr_blend(&canvas, x, y, rgb, a);
 }
 
 static void fill_rect(int x0, int y0, int w, int h, uint32_t rgb, float a)
 {
-    for (int y = y0; y < y0 + h; y++)
-        for (int x = x0; x < x0 + w; x++)
-            px_blend(x, y, rgb, a);
+    sr_fill_rect(&canvas, (float)x0, (float)y0, (float)w, (float)h, rgb, a);
 }
 
 static void fill_circle(float cx, float cy, float r, uint32_t rgb, float a)
 {
-    int x0 = (int)floorf(cx - r - 1), x1 = (int)ceilf(cx + r + 1);
-    int y0 = (int)floorf(cy - r - 1), y1 = (int)ceilf(cy + r + 1);
-    float rr = r * r;
-    for (int y = y0; y <= y1; y++) {
-        for (int x = x0; x <= x1; x++) {
-            float dx = x + 0.5f - cx, dy = y + 0.5f - cy;
-            float d = dx * dx + dy * dy;
-            if (d <= rr)
-                px_blend(x, y, rgb, a);
-        }
-    }
+    sr_fill_circle(&canvas, cx, cy, r, rgb, a);
 }
 
 static void draw_line(float x0, float y0, float x1, float y1, float width,
                       uint32_t rgb, float a)
 {
-    float dx = x1 - x0, dy = y1 - y0;
-    int steps = (int)(fmaxf(fabsf(dx), fabsf(dy)) + 1);
-    if (steps < 1) steps = 1;
-    for (int i = 0; i <= steps; i++) {
-        float t = (float)i / steps;
-        fill_circle(x0 + dx * t, y0 + dy * t, width * 0.5f, rgb, a);
-    }
+    sr_line(&canvas, x0, y0, x1, y1, width, rgb, a, 0, 0);
 }
 
 static void fill_diamond(float cx, float cy, float tw, float th, uint32_t rgb, float a)
 {
-    int x0 = (int)floorf(cx - tw * 0.5f - 1), x1 = (int)ceilf(cx + tw * 0.5f + 1);
-    int y0 = (int)floorf(cy - th * 0.5f - 1), y1 = (int)ceilf(cy + th * 0.5f + 1);
-    for (int y = y0; y <= y1; y++) {
-        for (int x = x0; x <= x1; x++) {
-            float nx = fabsf((x + 0.5f - cx) / (tw * 0.5f));
-            float ny = fabsf((y + 0.5f - cy) / (th * 0.5f));
-            if (nx + ny <= 1.0f)
-                px_blend(x, y, rgb, a);
-        }
-    }
-}
-
-static float edgef(float ax, float ay, float bx, float by, float px, float py)
-{
-    return (px - ax) * (by - ay) - (py - ay) * (bx - ax);
+    float xs[4] = {cx, cx + tw * 0.5f, cx, cx - tw * 0.5f};
+    float ys[4] = {cy - th * 0.5f, cy, cy + th * 0.5f, cy};
+    sr_fill_convex(&canvas, xs, ys, 4u, rgb, a);
 }
 
 static void fill_triangle(float ax, float ay, float bx, float by, float cx, float cy,
                           uint32_t rgb, float a)
 {
-    int x0 = (int)floorf(fminf(ax, fminf(bx, cx))) - 1;
-    int x1 = (int)ceilf(fmaxf(ax, fmaxf(bx, cx))) + 1;
-    int y0 = (int)floorf(fminf(ay, fminf(by, cy))) - 1;
-    int y1 = (int)ceilf(fmaxf(ay, fmaxf(by, cy))) + 1;
-    float area = edgef(ax, ay, bx, by, cx, cy);
-    if (fabsf(area) < 0.001f) return;
-    for (int y = y0; y <= y1; y++) {
-        for (int x = x0; x <= x1; x++) {
-            float px = x + 0.5f, py = y + 0.5f;
-            float w0 = edgef(bx, by, cx, cy, px, py);
-            float w1 = edgef(cx, cy, ax, ay, px, py);
-            float w2 = edgef(ax, ay, bx, by, px, py);
-            if ((w0 >= 0 && w1 >= 0 && w2 >= 0) ||
-                (w0 <= 0 && w1 <= 0 && w2 <= 0))
-                px_blend(x, y, rgb, a);
-        }
-    }
+    sr_fill_triangle(&canvas, ax, ay, bx, by, cx, cy, rgb, a);
 }
 
 static void outline_diamond(float cx, float cy, float tw, float th, uint32_t rgb, float a)
@@ -151,32 +93,12 @@ static void outline_diamond(float cx, float cy, float tw, float th, uint32_t rgb
 
 static int text_width(const char *s, int scale)
 {
-    return (int)strlen(s) * FONT_W * scale;
-}
-
-static void draw_glyph(int x, int y, const unsigned char *glyph,
-                       uint32_t rgb, float a, int scale)
-{
-    for (int gy = 0; gy < FONT_H; gy++) {
-        uint8_t row = glyph[gy];
-        for (int gx = 0; gx < FONT_W; gx++) {
-            if (!((row >> (7 - gx)) & 1)) continue;
-            for (int sy = 0; sy < scale; sy++)
-                for (int sx = 0; sx < scale; sx++)
-                    px_blend(x + gx * scale + sx, y + gy * scale + sy, rgb, a);
-        }
-    }
+    return sr_text_width(s, scale);
 }
 
 static void draw_text(float fx, float fy, const char *s, uint32_t rgb, float a, int scale)
 {
-    int x = (int)fx, y = (int)fy;
-    for (; *s; s++) {
-        unsigned char c = (unsigned char)*s;
-        if (c < 32 || c > 126) c = '?';
-        draw_glyph(x, y, font8x16[c - 32], rgb, a, scale);
-        x += FONT_W * scale;
-    }
+    sr_text(&canvas, fx, fy, s, rgb, a, scale);
 }
 
 static void draw_text_center(float cx, float y, const char *s,
@@ -193,52 +115,18 @@ static void draw_text_banner(float cx, float y, const char *s,
     draw_text_center(cx, y, s, rgb, a, scale);
 }
 
-/* ---------- image loading ---------- */
-
-static bool ppm_token(FILE *f, char *buf, size_t len)
-{
-    int c;
-    do {
-        c = fgetc(f);
-        if (c == '#') {
-            while (c != '\n' && c != EOF) c = fgetc(f);
-        }
-    } while (c != EOF && c <= ' ');
-    if (c == EOF) return false;
-    size_t n = 0;
-    while (c > ' ' && c != EOF) {
-        if (n + 1 < len) buf[n++] = (char)c;
-        c = fgetc(f);
-    }
-    buf[n] = '\0';
-    return true;
-}
-
 static Bitmap load_ppm(const char *path)
 {
     Bitmap b = {0};
-    FILE *f = fopen(path, "rb");
-    if (!f) return b;
-    char tok[64];
-    if (!ppm_token(f, tok, sizeof tok) || strcmp(tok, "P6")) { fclose(f); return b; }
-    if (!ppm_token(f, tok, sizeof tok)) { fclose(f); return b; }
-    b.w = atoi(tok);
-    if (!ppm_token(f, tok, sizeof tok)) { fclose(f); return b; }
-    b.h = atoi(tok);
-    if (!ppm_token(f, tok, sizeof tok)) { fclose(f); return b; }
-    int maxv = atoi(tok);
-    if (b.w <= 0 || b.h <= 0 || b.w > 8192 || b.h > 8192 || maxv != 255) {
-        fclose(f);
+    sr_canvas image;
+    if (!sr_load_ppm(&image, path)) return b;
+    if (image.w > 8192 || image.h > 8192) {
+        sr_canvas_free(&image);
         return b;
     }
-    b.px = malloc((size_t)b.w * b.h * sizeof *b.px);
-    if (!b.px) { fclose(f); return b; }
-    for (int i = 0; i < b.w * b.h; i++) {
-        unsigned char rgb[3];
-        if (fread(rgb, 1, 3, f) != 3) { free(b.px); b.px = NULL; fclose(f); return b; }
-        b.px[i] = ((uint32_t)rgb[0] << 16) | ((uint32_t)rgb[1] << 8) | rgb[2];
-    }
-    fclose(f);
+    b.w = image.w;
+    b.h = image.h;
+    b.px = image.px;
     b.ok = true;
     return b;
 }
@@ -1619,6 +1507,7 @@ void render_init(int w, int h)
     W = w;
     H = h;
     fb = malloc((size_t)W * H * 4);
+    (void)sr_canvas_init(&canvas, W, H);
     title_img = load_ppm(asset_path("title.ppm"));
     piece_atlas = load_ppm(asset_path("pieces.ppm"));
     piece_direction_atlas = load_ppm(asset_path("pieces_direction.ppm"));
@@ -1645,7 +1534,7 @@ static bool expect_bitmap(const Bitmap *b, const char *name, int w, int h,
 bool render_validate_assets(char *error, size_t error_len)
 {
     if (error && error_len) error[0] = '\0';
-    if (!fb) {
+    if (!fb || !canvas.px) {
         if (error && error_len)
             snprintf(error, error_len, "render framebuffer allocation failed");
         return false;
@@ -1673,17 +1562,20 @@ bool render_validate_assets(char *error, size_t error_len)
 
 void render_resize(int w, int h)
 {
-    if (w == W && h == H && fb) return;
+    if (w == W && h == H && fb && canvas.px) return;
     free(fb);
+    sr_canvas_free(&canvas);
     W = w;
     H = h;
     fb = malloc((size_t)W * H * 4);
+    (void)sr_canvas_init(&canvas, W, H);
 }
 
 void render_shutdown(void)
 {
     free(fb);
     fb = NULL;
+    sr_canvas_free(&canvas);
     free_bitmap(&title_img);
     free_bitmap(&board_bg_img);
     free_bitmap(&piece_atlas);
@@ -1695,7 +1587,7 @@ void render_shutdown(void)
 
 void render_frame(void)
 {
-    if (!fb) return;
+    if (!fb || !canvas.px) return;
     if (G.state == GS_INTRO) {
         draw_intro();
         return;
@@ -1736,15 +1628,5 @@ void render_frame(void)
 
 bool render_dump_ppm(const char *path)
 {
-    FILE *f = fopen(path, "wb");
-    if (!f) return false;
-    if (!fb) {
-        fclose(f);
-        return false;
-    }
-    bool ok = fprintf(f, "P6\n%d %d\n255\n", W, H) > 0;
-    for (int i = 0; ok && i < W * H; i++)
-        ok = fwrite(fb + i * 4, 1, 3, f) == 3;
-    if (fclose(f) != 0) ok = false;
-    return ok;
+    return sr_write_ppm(&canvas, path);
 }

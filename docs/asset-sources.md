@@ -77,7 +77,7 @@ sound effects when runtime assets cannot be loaded.
 
 ## Embedded font
 
-`src/font8x16.h` contains glyphs extracted from Debian console-setup's
+`third_party/soft-raster/src/font8x16.h` contains glyphs extracted from Debian console-setup's
 `Lat15-Fixed16` console font. Debian describes its console fonts as public
 domain. The font's X11-lineage permissive notice, including the Sony Corp.,
 BIZNET Poland, and Dmitry Yu. Bolkhovityanov notices, is preserved verbatim in
