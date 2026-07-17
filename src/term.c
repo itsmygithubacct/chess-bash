@@ -1,30 +1,22 @@
 /* Game-facing terminal API over the shared Kitty framebuffer presenter. */
 #include "chess_bash.h"
 #include "kitty_framebuffer.h"
+#include "kitty_keyboard_posix.h"
 
+#include <errno.h>
 #include <stdlib.h>
-#include <sys/select.h>
 #include <unistd.h>
 
 static kittyfb_session framebuffer;
+static kittykb_terminal keyboard;
 static bool framebuffer_active;
+static bool keyboard_active;
 static volatile int shutdown_claimed;
-
-static int read_byte_timeout(unsigned char *c, int timeout_ms)
-{
-    fd_set readfds;
-    struct timeval timeout = {timeout_ms / 1000,
-                              (timeout_ms % 1000) * 1000};
-    FD_ZERO(&readfds);
-    FD_SET(STDIN_FILENO, &readfds);
-    if (select(STDIN_FILENO + 1, &readfds, NULL, NULL, &timeout) <= 0)
-        return 0;
-    return read(STDIN_FILENO, c, 1) == 1;
-}
 
 bool term_init(int *outW, int *outH)
 {
     kittyfb_options options;
+    kittykb_terminal_options key_options;
 
     kittyfb_session_init(&framebuffer);
     kittyfb_options_init(&options);
@@ -38,6 +30,20 @@ bool term_init(int *outW, int *outH)
         return false;
     framebuffer_active = true;
     shutdown_claimed = 0;
+    kittykb_terminal_init(&keyboard);
+    kittykb_terminal_options_init(&key_options);
+    key_options.flags = KITTYKB_FLAGS_KEY_STATE;
+    key_options.make_raw = false;
+    key_options.make_nonblocking = false;
+    if (kittykb_terminal_start(&keyboard, STDIN_FILENO, STDOUT_FILENO,
+                               &key_options) != 0) {
+        int error = errno;
+        kittyfb_stop(&framebuffer);
+        framebuffer_active = false;
+        errno = error;
+        return false;
+    }
+    keyboard_active = true;
     *outW = kittyfb_width(&framebuffer);
     *outH = kittyfb_height(&framebuffer);
     return true;
@@ -64,39 +70,52 @@ static bool claim_shutdown(void)
 void term_shutdown(void)
 {
     if (!claim_shutdown()) return;
+    if (keyboard_active) {
+        (void)kittykb_terminal_stop(&keyboard);
+        keyboard_active = false;
+    }
     kittyfb_stop(&framebuffer);
     framebuffer_active = false;
 }
 
 void term_emergency_restore(void)
 {
+    static const char keyboard_pop[] = "\x1b\\\x1b[<u";
+
     if (!claim_shutdown()) return;
+    if (keyboard_active)
+        (void)write(STDOUT_FILENO, keyboard_pop, sizeof keyboard_pop - 1);
     kittyfb_emergency_restore(&framebuffer);
+}
+
+static int game_key(uint32_t key)
+{
+    switch (key) {
+    case KITTYKB_KEY_ENTER: return KEY_ENTER;
+    case KITTYKB_KEY_BACKSPACE: return KEY_BACKSPACE;
+    case KITTYKB_KEY_TAB: return KEY_TAB;
+    case KITTYKB_KEY_ESCAPE: return KEY_ESC;
+    case KITTYKB_KEY_UP: return KEY_UP;
+    case KITTYKB_KEY_DOWN: return KEY_DOWN;
+    case KITTYKB_KEY_LEFT: return KEY_LEFT;
+    case KITTYKB_KEY_RIGHT: return KEY_RIGHT;
+    default: return key <= 0x7fU ? (int)key : -1;
+    }
 }
 
 int term_poll_key(void)
 {
-    unsigned char c;
-    if (read(STDIN_FILENO, &c, 1) <= 0) return -1;
-    if (c == '\r' || c == '\n') return KEY_ENTER;
-    if (c == 127 || c == 8) return KEY_BACKSPACE;
-    if (c == '\t') return KEY_TAB;
-    if (c == 3) { G.quit = true; return -1; }
-    if (c == 0x1b) {
-        unsigned char seq[2];
-        if (!read_byte_timeout(&seq[0], 25)) return KEY_ESC;
-        if (seq[0] != '[' && seq[0] != 'O') return KEY_ESC;
-        if (!read_byte_timeout(&seq[1], 25)) return KEY_ESC;
-        switch (seq[1]) {
-        case 'A': return KEY_UP;
-        case 'B': return KEY_DOWN;
-        case 'C': return KEY_RIGHT;
-        case 'D': return KEY_LEFT;
-        default:
-            while (seq[1] >= '0' && seq[1] <= ';')
-                if (!read_byte_timeout(&seq[1], 25)) break;
+    kittykb_event event;
+    if (!keyboard_active || kittykb_terminal_read(&keyboard) < 0) return -1;
+    while (kittykb_input_next(&keyboard.input, &event)) {
+        if (event.action == KITTYKB_ACTION_RELEASE) continue;
+        if ((event.modifiers & KITTYKB_MOD_CTRL) &&
+            (event.key == 'c' || event.key == 'C')) {
+            G.quit = true;
             return -1;
         }
+        int key = game_key(event.key);
+        if (key >= 0) return key;
     }
-    return c;
+    return -1;
 }
