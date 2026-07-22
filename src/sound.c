@@ -1,39 +1,20 @@
 #include "chess_bash.h"
-#include "pcm_mixer.h"
+#include "pcmmix_bank.h"
 
 #include <limits.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #define SR 44100
 #define MAX_SFX_VARIANTS 6
 
 typedef struct { int16_t *data; int len; } Sample;
-static Sample samples[SOUND_COUNT][MAX_SFX_VARIANTS];
-static uint8_t sample_counts[SOUND_COUNT];
-static uint8_t last_variants[SOUND_COUNT];
+static pcmmix_bank sound_bank;
 static Sample music_tracks[MUSIC_COUNT];
 static pcmmix mixer;
 static bool mixer_started;
 static uint32_t srng = 0x51a7c0deu;
-
-static void clear_sample(int id, int variant)
-{
-    if (id < 0 || id >= SOUND_COUNT ||
-        variant < 0 || variant >= MAX_SFX_VARIANTS) return;
-    free(samples[id][variant].data);
-    samples[id][variant].data = NULL;
-    samples[id][variant].len = 0;
-}
-static void clear_sample_bank(int id)
-{
-    if (id < 0 || id >= SOUND_COUNT) return;
-    for (int variant = 0; variant < MAX_SFX_VARIANTS; variant++)
-        clear_sample(id, variant);
-    sample_counts[id] = 0;
-}
 
 static float frand_audio(void)
 {
@@ -60,10 +41,10 @@ static void bake(int id, const float *src, int n, float peak)
         if (n - i < fo) v *= (float)(n - i) / fo;
         out[i] = (int16_t)(v * 32767.0f);
     }
-    clear_sample_bank(id);
-    samples[id][0].data = out;
-    samples[id][0].len = n;
-    sample_counts[id] = 1;
+    pcmmix_bank_clear_cue(&sound_bank, (uint32_t)id);
+    if (!pcmmix_bank_take(&sound_bank, (uint32_t)id, 0u, out,
+                          (size_t)n, 1.0f, 1.0f))
+        free(out);
 }
 
 static void gen_beep(int id, float f0, float f1, float dur, float peak)
@@ -214,23 +195,18 @@ static bool load_wav_into(Sample *dst, const char *path)
     return true;
 }
 
-static bool load_wav_sample(int id, int variant, const char *path)
-{
-    if (id < 0 || id >= SOUND_COUNT ||
-        variant < 0 || variant >= MAX_SFX_VARIANTS) return false;
-    return load_wav_into(&samples[id][variant], path);
-}
-
 static void load_sfx_bank(int id, const char *const *paths, int count)
 {
+    char error[256];
+
     if (id < 0 || id >= SOUND_COUNT || !paths || count < 1) return;
     if (count > MAX_SFX_VARIANTS) count = MAX_SFX_VARIANTS;
-    int loaded = 0;
-    for (int variant = 0; variant < count; variant++) {
-        if (!load_wav_sample(id, variant, asset_path(paths[variant]))) break;
-        loaded++;
-    }
-    if (loaded > 0) sample_counts[id] = (uint8_t)loaded;
+    for (int variant = 0; variant < count; variant++)
+        if (!pcmmix_bank_load_wav(&sound_bank, (uint32_t)id,
+                                  (uint32_t)variant,
+                                  asset_path(paths[variant]), 1.0f, 1.0f,
+                                  error, sizeof error))
+            break;
 }
 
 static void load_sfx_assets(void)
@@ -282,9 +258,9 @@ bool sound_init(void)
 {
     pcmmix_options options;
 
+    (void)pcmmix_bank_init(&sound_bank, SOUND_COUNT, 0x51a7c0deu);
     synth_all();
     load_sfx_assets();
-    memset(last_variants, 0xff, sizeof last_variants);
     load_music_assets();
     pcmmix_options_init(&options);
     options.max_voices = 16;
@@ -297,8 +273,7 @@ void sound_shutdown(void)
 {
     if (mixer_started) pcmmix_stop(&mixer);
     mixer_started = false;
-    for (int i = 0; i < SOUND_COUNT; i++)
-        clear_sample_bank(i);
+    pcmmix_bank_clear(&sound_bank);
     for (int i = 0; i < MUSIC_COUNT; i++) {
         pcmmix_wav_free(music_tracks[i].data);
         music_tracks[i] = (Sample){0};
@@ -332,22 +307,8 @@ int sound_music_current(void)
 
 void sound_play(int id, float vol, float pitch)
 {
-    if (!mixer_started || id < 0 || id >= SOUND_COUNT ||
-        sample_counts[id] == 0 || !samples[id][0].data)
-        return;
-
-    int variant = 0;
-    int count = sample_counts[id];
-    if (count > 1) {
-        variant = (int)(frand_audio() * count);
-        if (variant == last_variants[id]) {
-            int offset = 1 + (int)(frand_audio() * (count - 1));
-            variant = (variant + offset) % count;
-        }
-    }
-    last_variants[id] = (uint8_t)variant;
-    const Sample *sample = &samples[id][variant];
-    pcmmix_sample clip = {sample->data, (size_t)sample->len};
-    (void)pcmmix_play(&mixer, &clip, clampf(vol, 0, 1.5f),
-                      pitch <= 0 ? 1.0f : pitch);
+    if (!mixer_started || id < 0 || id >= SOUND_COUNT) return;
+    (void)pcmmix_bank_play(&mixer, &sound_bank, (uint32_t)id,
+                           clampf(vol, 0, 1.5f),
+                           pitch <= 0 ? 1.0f : pitch);
 }
